@@ -1,0 +1,119 @@
+title: ManuStart
+
+---
+
+→ Player: Nice hat.
+
+→ Player: Nice glasses.
+
+→ Player: Nice suit.
+
+
+Manu: *unintelligible*
+
+
+→ Player: What did you say about my mother?
+
+	Manu: She’s a very nice lady.
+
+	Player: Sooo, you like…
+
+	→ Player: History?
+
+		<<jump rejectManu>>
+
+	→ Player: Pizza?
+
+		<<jump rejectManu>>
+
+	→ Player: Cosplay?
+
+		<<jump rejectManu>>
+
+	→ Player: Philosophy?
+
+		<<jump Kant>>
+
+→ Player: Did you just call me Kant? Like the philosopher?
+
+	<<jump Kant>>
+
+→ Player: Well, fuck you too.
+
+===
+
+title: rejectManu
+
+---
+
+Manu: No.
+
+===
+
+title: Kant
+
+---
+
+Manu: Es ist überall nichts in der Welt, ja überhaupt auch außer derselben zu denken möglich, was ohne Einschränkungen für gut könnte gehalten werden, als allein ein guter Wille.
+
+	→ Player: Sure thing.
+
+		Manu: Are you just agreeing with me, without having understood what I said, so I will go out with you?
+
+		Player: Maaaybe?
+
+			<<jump rejectManu>>
+
+	→ Player: I don’t really agree, I myself am more fond of Utilitarianism.
+
+		Manu: So you think lying can be morally correct if it achieves a positive endgoal?
+
+		→ Player: Sure.
+
+			Player: But I would never lie about how smart and great and attractive you are. *wink*
+
+			Manu: … 
+
+			Player: Would you pretty please go out with me?
+
+			Manu: I guess the categorical imperative allows it.
+
+				<<jump ManuHappyEnd>>
+
+	→ Player: On second thought, not really…
+
+		Manu: Maybe you should read Kant. 
+
+		Player: I will if you would do me the honor of going out with me?
+
+		Manu: … you are kind of cute.
+
+			<<jump ManuHappyEnd>>
+
+	→ Player: Lying is the most fun a girl can have without taking her clothes off.
+
+		Manu: Like the Panic! at the disco song?
+
+		Player: Maaaybe? 
+
+		Manu: Okay, that settles it.
+
+			<<jump ManuHappyEnd>>
+
+===
+
+title: ManuHappyEnd
+
+---
+
+Manu: I will go out with you.
+
+Player: You won’t regret it. *wink*
+
+Manu: … I already kinda do.
+
+Player: Aww sweetheart, I’m sorry, I’ll try to act less silly.
+
+Manu: This is acceptable. <3
+
+===
