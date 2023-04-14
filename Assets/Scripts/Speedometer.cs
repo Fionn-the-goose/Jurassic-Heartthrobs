@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
+using TMPro;
 
-public class Speedometer : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+public class Speedometer : MonoBehaviour {
+    private TMP_Text m_Text;
+    private PlayerCar m_Player;
+
+    void Start() {
+        m_Text = GetComponent<TMP_Text>();
+        m_Player = FindObjectOfType<PlayerCar>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Update() {
+        var speed = Math.Round(10f * m_Player.Velocity, 2);
+        m_Text.text = speed + " km/h";
     }
 }
