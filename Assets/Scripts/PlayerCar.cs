@@ -29,10 +29,8 @@ public class PlayerCar : MonoBehaviour {
         var delta_t = Time.fixedDeltaTime;
         var input = m_MoveAction.action.ReadValue<Vector2>();
         var delta_pos = delta_t * m_Speed * transform.forward * input.y;
-        var torque = m_TurnSens * input.x * transform.up;
         m_RigidBody.AddForce(delta_pos, ForceMode.Acceleration);
-        // m_RigidBody.AddTorque(torque, ForceMode.Force);
-        m_RotAngle += m_TurnSens * input.x * delta_t;
+        m_RotAngle += m_TurnSens * input.x * delta_t * (Velocity/3.5f);
         var rot = Quaternion.AngleAxis(m_RotAngle, transform.up);
         m_RigidBody.MoveRotation(rot);
     }

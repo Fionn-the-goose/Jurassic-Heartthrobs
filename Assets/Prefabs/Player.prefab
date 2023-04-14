@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MoveAction: {fileID: -1680190386980627800, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TurnSens: 30
+  m_TurnSens: 60
   m_Speed: 200
 --- !u!114 &3771074815390793290
 MonoBehaviour:
