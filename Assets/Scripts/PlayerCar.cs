@@ -67,7 +67,7 @@ public class PlayerCar : MonoBehaviour {
         m_RigidBody.MoveRotation(rot);
 
         var accel = delta_t * m_Speed * transform.forward * input.y;
-        if (Velocity < m_MaxSpeed) {
+        if (Velocity < m_MaxSpeed || Input.GetKey(KeyCode.P)) {
             m_RigidBody.AddForce(accel, ForceMode.Acceleration);
         }
     }
