@@ -1,3 +1,4 @@
+using Yarn.Unity;
 using System;
 using UnityEngine;
 
@@ -23,5 +24,20 @@ public class GameManager : MonoBehaviour {
 
     public void SetFrozen(bool freeze) {
         OnFreezeChange?.Invoke(freeze);
+    }
+
+    [YarnCommand("date_success")]
+    public static void DateSuccess(string dinoName) {
+        foreach (var p in FindObjectsOfType<DatingPlatform>()) {
+            if (p.DinoName == dinoName) {
+                p.SetVisible(true);
+                Debug.Log($"Datin {dinoName}!");
+            }
+        }
+        foreach (var d in FindObjectsOfType<Dino>()) {
+            if (d.Name == dinoName) {
+                Destroy(d.gameObject);
+            }
+        }
     }
 }
