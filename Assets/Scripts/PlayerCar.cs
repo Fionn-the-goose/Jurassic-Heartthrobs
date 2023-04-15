@@ -124,12 +124,12 @@ public class PlayerCar : MonoBehaviour {
     }
 
     void UpdateDash(float delta_t) {
-        float direction = 0f;
+        /*float direction = 0f;
         if (m_DashLeftAction.action.WasPressedThisFrame()) {
             direction = -1f;
         } else if (m_DashRightAction.action.WasPressedThisFrame()) {
             direction = 1f;
-        }
+        }*/
 
         /*
         var dash_offset_target = m_DashForce * direction * (transform.right + 0.3f * transform.forward);
