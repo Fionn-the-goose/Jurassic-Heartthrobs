@@ -8,6 +8,8 @@ public class DialogeTrigger : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         var date = other.GetComponent<Dino>();
         if(date != null){
+            Debug.Log(date);
+            Time.timeScale = 0f;
             dialogueRunner.StartDialogue(date.name + "Start");
         }
     }
