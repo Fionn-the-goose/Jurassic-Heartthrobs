@@ -12,6 +12,9 @@ public class PlayerCar : MonoBehaviour {
     [SerializeField]
     private float m_Speed;
 
+    [SerializeField]
+    private bool m_BounceOutOfBounds = true;
+
     private Rigidbody m_RigidBody;
     private Camera m_Camera;
     private float m_RotAngle = 0f;
@@ -47,7 +50,7 @@ public class PlayerCar : MonoBehaviour {
         var delta_pos = delta_t * m_Speed * transform.forward * input.y;
         var fwd = GoingForward ? 1 : -1;
         m_RigidBody.AddForce(delta_pos, ForceMode.Acceleration);
-        m_RotAngle += fwd * m_TurnSens * input.x * delta_t * (Velocity/3.5f);
+        m_RotAngle += fwd * m_TurnSens * input.x * delta_t * (Velocity/4.5f);
         var rot = Quaternion.AngleAxis(m_RotAngle, transform.up);
         m_RigidBody.MoveRotation(rot);
 
@@ -58,9 +61,10 @@ public class PlayerCar : MonoBehaviour {
             return;
         }
         foreach (ContactPoint contact in collision.contacts) {
-            Debug.DrawRay(contact.point, contact.normal, Color.white);
+            float f = m_BounceOutOfBounds ? 1f : 0.4f;
+            var force = f * collision.relativeVelocity.magnitude * contact.normal / collision.contacts.Length;
+            m_RigidBody.AddForce(force, ForceMode.Impulse);
         }
-        Debug.Log(collision.relativeVelocity.magnitude);
     }
 
 }
