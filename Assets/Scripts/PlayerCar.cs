@@ -120,7 +120,12 @@ public class PlayerCar : MonoBehaviour {
             }
         }
         var delta = target - m_DriftOffset;
-        m_DriftOffset += delta * delta_t * 4f;
+        var offset_new = m_DriftOffset + (delta * delta_t * 4f);
+        if (Mathf.Sign(m_DriftOffset) + Mathf.Sign(offset_new) != 0) {
+            m_DriftOffset = offset_new;
+        } else {
+            m_DriftOffset = target;
+        }
     }
 
     void UpdateDash(float delta_t) {
