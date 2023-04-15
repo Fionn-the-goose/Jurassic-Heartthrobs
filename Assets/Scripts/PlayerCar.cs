@@ -20,6 +20,10 @@ public class PlayerCar : MonoBehaviour {
         get => m_RigidBody.velocity.magnitude;
     }
 
+    public float SignedVelocity {
+        get => Velocity * (GoingForward ? 1f : -1f);
+    }
+
     public bool GoingForward {
         get {
             // forward = 0. reverse = 180
