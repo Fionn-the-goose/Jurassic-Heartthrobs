@@ -414,6 +414,7 @@ GameObject:
   - component: {fileID: 8090267232471806093}
   - component: {fileID: 3049507872800691951}
   - component: {fileID: 543422210412234197}
+  - component: {fileID: 4033901087051624188}
   m_Layer: 0
   m_Name: DinoDriver
   m_TagString: Untagged
@@ -560,6 +561,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6437746, y: 0.7494688, z: 1.1379974}
   m_Center: {x: 0.0048138257, y: -0.2889367, z: -0.09467245}
+--- !u!114 &4033901087051624188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8090267232471806086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 046a3d8bae336520785c3552c6f65812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Manu
 --- !u!1001 &9205452450561311273
 PrefabInstance:
   m_ObjectHideFlags: 0
