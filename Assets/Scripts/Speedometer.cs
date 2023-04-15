@@ -12,7 +12,7 @@ public class Speedometer : MonoBehaviour {
     }
 
     void Update() {
-        var speed = Math.Round(13f * m_Player.Velocity, 2);
-        m_Text.text = speed + " km/h";
+        var speed = Math.Round(25f * m_Player.Velocity, 1);
+        m_Text.text = speed + " km/h (" + m_Player.Velocity + ")";
     }
 }

@@ -15,6 +15,11 @@ public class PlayerCar : MonoBehaviour {
     [SerializeField]
     private float m_Speed;
 
+    private float m_MaxSpeed = 6f;
+
+    [SerializeField]
+    private float m_DashForce;
+
     [SerializeField]
     private bool m_BounceOutOfBounds = true;
 
@@ -55,24 +60,28 @@ public class PlayerCar : MonoBehaviour {
 
     void UpdateMovement(float delta_t) {
         var input = m_MoveAction.action.ReadValue<Vector2>();
-        var delta_pos = delta_t * m_Speed * transform.forward * input.y;
         var fwd = GoingForward ? 1 : -1;
-        m_RigidBody.AddForce(delta_pos, ForceMode.Acceleration);
+
         m_RotAngle += fwd * m_TurnSens * input.x * delta_t * (Velocity/4.5f);
         var rot = Quaternion.AngleAxis(m_RotAngle, transform.up);
         m_RigidBody.MoveRotation(rot);
+
+        var accel = delta_t * m_Speed * transform.forward * input.y;
+        if (Velocity < m_MaxSpeed) {
+            m_RigidBody.AddForce(accel, ForceMode.Acceleration);
+        }
     }
 
     void UpdateDash(float delta_t) {
-        float push = 0f;
+        float direction = 0f;
         if (m_DashLeftAction.action.WasPressedThisFrame()) {
-            push = -1f;
+            direction = -1f;
         } else if (m_DashRightAction.action.WasPressedThisFrame()) {
-            push = 1f;
+            direction = 1f;
         } else {
             return;
         }
-        m_RigidBody.AddForce(push * transform.right, ForceMode.Impulse);
+        m_RigidBody.AddForce(m_DashForce * direction * (transform.right + 0.3f * transform.forward), ForceMode.Impulse);
     }
 
     void OnCollisionEnter(Collision collision) {
@@ -81,8 +90,9 @@ public class PlayerCar : MonoBehaviour {
         }
         foreach (ContactPoint contact in collision.contacts) {
             float f = m_BounceOutOfBounds ? 1f : 0.4f;
-            var force = f * collision.relativeVelocity.magnitude * contact.normal / collision.contacts.Length;
+            var force = 5f * f * collision.relativeVelocity.magnitude * contact.normal / collision.contacts.Length;
             m_RigidBody.AddForce(force, ForceMode.Impulse);
+            Debug.Log("hit wall");
         }
     }
 
