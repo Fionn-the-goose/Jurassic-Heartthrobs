@@ -15,7 +15,7 @@ public class PlayerCar : MonoBehaviour {
     [SerializeField]
     private float m_Speed;
 
-    private float m_MaxSpeed = 6f;
+    private float m_MaxSpeed = 15f;
 
     [SerializeField]
     private float m_DashForce;
