@@ -128,7 +128,7 @@ public class PlayerCar : MonoBehaviour {
         }
         foreach (ContactPoint contact in collision.contacts) {
             float f = m_BounceOutOfBounds ? 1f : 0.4f;
-            var force = 5f * f * collision.relativeVelocity.magnitude * contact.normal / collision.contacts.Length;
+            var force = 20f * f * (0.3f * collision.relativeVelocity.magnitude) * contact.normal / collision.contacts.Length;
             m_RigidBody.AddForce(force, ForceMode.Impulse);
             Debug.Log("hit wall");
         }
