@@ -7,6 +7,9 @@ public class Dino : MonoBehaviour {
     private void Start() {
         DinoAgend = GetComponent<NavMeshAgent>();
         DinoAgend.destination = InitialGoal.position;
+        GameManager.Instance.OnFreezeChange += (bool frozen) => {
+            DinoAgend.enabled = !frozen;
+        };
     }
     private void Update() {
     }
