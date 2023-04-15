@@ -15,7 +15,7 @@ public class PlayerCar : MonoBehaviour {
     [SerializeField]
     private float m_Speed;
 
-    private float m_MaxSpeed = 15f;
+    private float m_MaxSpeed = 10f;
 
     [SerializeField]
     private float m_DashForce;
@@ -87,7 +87,8 @@ public class PlayerCar : MonoBehaviour {
         var input = m_MoveAction.action.ReadValue<Vector2>();
         var fwd = GoingForward ? 1 : -1;
 
-        m_RotAngle += fwd * m_TurnSens * input.x * delta_t * (Velocity/4.5f);
+        float f = Velocity < 0.1f ? 0f : 1f;
+        m_RotAngle += fwd * m_TurnSens * input.x * delta_t * Mathf.Max(f, (Velocity/4.5f));
         var rot = Quaternion.AngleAxis(m_RotAngle + m_DriftOffset, transform.up);
         m_RigidBody.MoveRotation(rot);
 
@@ -101,7 +102,7 @@ public class PlayerCar : MonoBehaviour {
         var input = m_MoveAction.action.ReadValue<Vector2>().x;
         float target = 0f;
         if (Input.GetKey(KeyCode.Space) && Mathf.Abs(input) > 0.5f) {
-            target = Mathf.Sign(input) * 15f;
+            target = Mathf.Sign(input) * 35f;
             if (Input.GetKeyDown(KeyCode.Space)) {
                 m_RigidBody.AddForce(40f * Vector3.up, ForceMode.Impulse);
             }
