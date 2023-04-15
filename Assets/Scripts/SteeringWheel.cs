@@ -20,6 +20,9 @@ public class SteeringWheel : MonoBehaviour {
     }
 
     void Update() {
+        if (GameManager.Instance.Frozen) {
+            return;
+        }
         float angle_prev = m_Angle;
         m_TargetAngle = -1f * m_MaxAngle * m_Car.SteeringInput;
         var delta = m_TargetAngle - m_Angle;

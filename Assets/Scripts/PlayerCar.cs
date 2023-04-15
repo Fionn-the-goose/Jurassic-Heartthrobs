@@ -31,6 +31,8 @@ public class PlayerCar : MonoBehaviour {
     private Vector3 m_PreSleepVel;
     private Vector3 m_PreSleepAngVel;
 
+    private float m_DriftOffset = 0f;
+
     public float Velocity {
         get => m_RigidBody.velocity.magnitude;
     }
@@ -72,7 +74,11 @@ public class PlayerCar : MonoBehaviour {
     }
 
     void FixedUpdate() {
+        if (GameManager.Instance.Frozen) {
+            return;
+        }
         var delta_t = Time.fixedDeltaTime;
+        UpdateDrift(delta_t);
         UpdateMovement(delta_t);
         UpdateDash(delta_t);
     }
@@ -82,13 +88,26 @@ public class PlayerCar : MonoBehaviour {
         var fwd = GoingForward ? 1 : -1;
 
         m_RotAngle += fwd * m_TurnSens * input.x * delta_t * (Velocity/4.5f);
-        var rot = Quaternion.AngleAxis(m_RotAngle, transform.up);
+        var rot = Quaternion.AngleAxis(m_RotAngle + m_DriftOffset, transform.up);
         m_RigidBody.MoveRotation(rot);
 
         var accel = delta_t * m_Speed * transform.forward * input.y;
         if (Velocity < m_MaxSpeed || Input.GetKey(KeyCode.P)) {
             m_RigidBody.AddForce(accel, ForceMode.Acceleration);
         }
+    }
+
+    void UpdateDrift(float delta_t) {
+        var input = m_MoveAction.action.ReadValue<Vector2>().x;
+        float target = 0f;
+        if (Input.GetKey(KeyCode.Space) && Mathf.Abs(input) > 0.5f) {
+            target = Mathf.Sign(input) * 15f;
+            if (Input.GetKeyDown(KeyCode.Space)) {
+                m_RigidBody.AddForce(40f * Vector3.up, ForceMode.Impulse);
+            }
+        }
+        var delta = target - m_DriftOffset;
+        m_DriftOffset += delta * Time.deltaTime * 4f;
     }
 
     void UpdateDash(float delta_t) {

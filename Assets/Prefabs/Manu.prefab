@@ -252,6 +252,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5062938854358640724}
     m_Modifications:
+    - target: {fileID: -9199463950669270588, guid: a028efe2f1ef3614fb63b50313d0dadc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a028efe2f1ef3614fb63b50313d0dadc, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -312,9 +316,29 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -2638843417901756237, guid: a028efe2f1ef3614fb63b50313d0dadc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -446297908452622044, guid: a028efe2f1ef3614fb63b50313d0dadc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a028efe2f1ef3614fb63b50313d0dadc, type: 3}
       propertyPath: m_Name
       value: Gokart
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463028862711995156, guid: a028efe2f1ef3614fb63b50313d0dadc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065759819845539120, guid: a028efe2f1ef3614fb63b50313d0dadc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764181948101679052, guid: a028efe2f1ef3614fb63b50313d0dadc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a028efe2f1ef3614fb63b50313d0dadc, type: 3}
