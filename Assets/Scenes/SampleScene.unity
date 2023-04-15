@@ -434,6 +434,14 @@ PrefabInstance:
       propertyPath: yarnProject
       value: 
       objectReference: {fileID: 7545569452688597077, guid: 6f34d1ac872827991929ca45af99ee36, type: 3}
+    - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: verboseLogging
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: startAutomatically
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7778558434935992803, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -951,6 +959,10 @@ PrefabInstance:
       propertyPath: m_DashForce
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8120023308956932589, guid: f60a34815905e901b98c512696ee1692, type: 3}
+      propertyPath: dialogueRunner
+      value: 
+      objectReference: {fileID: 1667033382}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f60a34815905e901b98c512696ee1692, type: 3}
 --- !u!1001 &1095111580
@@ -1135,6 +1147,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b137540b07c42dcabc23a758dc67727, type: 3}
+--- !u!114 &1667033382 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+  m_PrefabInstance: {fileID: 497084378}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1828856950
 GameObject:
   m_ObjectHideFlags: 0
