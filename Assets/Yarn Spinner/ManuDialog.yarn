@@ -2,44 +2,43 @@
 
 position: -295,-219
 ---
+-> Player: Nice hat.
 
-→ Player: Nice hat.
+-> Player: Nice glasses.
 
-→ Player: Nice glasses.
-
-→ Player: Nice suit.
+-> Player: Nice suit.
 
 
 Manu: *unintelligible*
 
 
-→ Player: What did you say about my mother?
+-> Player: What did you say about my mother?
 
-	Manu: She’s a very nice lady.
+	Manu: She's a very nice lady.
 
 	Player: Sooo, you like…
 
-	→ Player: History?
+	-> Player: History?
 
 		<<jump rejectManu>>
 
-	→ Player: Pizza?
+	-> Player: Pizza?
 
 		<<jump rejectManu>>
 
-	→ Player: Cosplay?
+	-> Player: Cosplay?
 
 		<<jump rejectManu>>
 
-	→ Player: Philosophy?
+	-> Player: Philosophy?
 
 		<<jump Kant>>
 
-→ Player: Did you just call me Kant? Like the philosopher?
+-> Player: Did you just call me Kant? Like the philosopher?
 
 	<<jump Kant>>
 
-→ Player: Well, fuck you too.
+-> Player: Well, fuck you too.
 
 ===
 
@@ -54,12 +53,12 @@ Manu: No.
 
 title: Kant
 
-position: -12,36
+position: 17,11
 ---
 
 Manu: Es ist überall nichts in der Welt, ja überhaupt auch außer derselben zu denken möglich, was ohne Einschränkungen für gut könnte gehalten werden, als allein ein guter Wille.
 
-	→ Player: Sure thing.
+	-> Player: Sure thing.
 
 		Manu: Are you just agreeing with me, without having understood what I said, so I will go out with you?
 
@@ -67,11 +66,11 @@ Manu: Es ist überall nichts in der Welt, ja überhaupt auch außer derselben zu
 
 			<<jump rejectManu>>
 
-	→ Player: I don’t really agree, I myself am more fond of Utilitarianism.
+	-> Player: I don't really agree, I myself am more fond of Utilitarianism.
 
 		Manu: So you think lying can be morally correct if it achieves a positive endgoal?
 
-		→ Player: Sure.
+		-> Player: Sure.
 
 			Player: But I would never lie about how smart and great and attractive you are. *wink*
 
@@ -83,7 +82,7 @@ Manu: Es ist überall nichts in der Welt, ja überhaupt auch außer derselben zu
 
 				<<jump ManuHappyEnd>>
 
-	→ Player: On second thought, not really…
+	-> Player: On second thought, not really…
 
 		Manu: Maybe you should read Kant. 
 
@@ -93,7 +92,7 @@ Manu: Es ist überall nichts in der Welt, ja überhaupt auch außer derselben zu
 
 			<<jump ManuHappyEnd>>
 
-	→ Player: Lying is the most fun a girl can have without taking her clothes off.
+	-> Player: Lying is the most fun a girl can have without taking her clothes off.
 
 		Manu: Like the Panic! at the disco song?
 
@@ -107,16 +106,16 @@ Manu: Es ist überall nichts in der Welt, ja überhaupt auch außer derselben zu
 
 title: ManuHappyEnd
 
-position: 292,-9
+position: 25,-216
 ---
 
 Manu: I will go out with you.
 
-Player: You won’t regret it. *wink*
+Player: You won't regret it. *wink*
 
 Manu: … I already kinda do.
 
-Player: Aww sweetheart, I’m sorry, I’ll try to act less silly.
+Player: Aww sweetheart, I'm sorry, I'll try to act less silly.
 
 Manu: This is acceptable. <3
 

@@ -1,0 +1,128 @@
+title: PedroStart
+position: -430,-306
+---
+Player: And who are you supposed to be?
+
+Pedro: I am your cool slutty daddy.
+
+Player: Soooo, you wanna date?
+
+Pedro: I'm just gonna sit here and say I love you and hi and slaaay and yaaas.
+
+    <<set $love to 0>>
+
+    <<set $hi to 0>>
+
+    <<set $slay to 0>>
+
+    <<set $yas to 0>>
+
+    <<set $Elim to true>>
+
+    <<set $DinoDate to 1>>
+
+    <<jump LoveU>>
+
+===
+
+title: LoveU
+
+position: -51,-8
+
+---
+
+-> Player: You love me? <<if $love == 0>>
+
+    <<jump love1>>
+
+-> Player: How do you pronounce "shark" in german? <<if $hi == 0>>
+
+    <<jump hi1>>
+
+-> Player: How do I look? <<if $slay == 0>>
+
+    <<jump slay1>>
+
+-> Player: Does that mean you don't want to date me right now? <<if $yas == 0>>
+
+    <<jump yas1>>
+
+-> Player: Have you met my partner Elim? <<if $Elim == true>>
+
+    Pedro: Met? That's my soulmate, bitch!
+
+    Pedro: I would follow them everywhere.
+
+    Player: What about me?
+
+    <<if $DinoDate == 1>>  
+        Elim: You could date both of us?
+            <<jump PedroHappyEnd>>
+    <<elseif $DinoDate > 1>>
+        Elim: You could date all of us?
+        <<jump PedroHappyEnd>>
+    <<endif>>
+===
+
+title: love1
+
+position: -26,-220
+---
+
+Pedro: I love you.
+
+    <<set $love to 1>>
+
+    <<jump LoveU>>
+
+===
+
+title: hi1
+
+position: 186,-24
+---
+
+Pedro: Hi.
+
+    <<set $hi to 1>>
+
+    <<jump LoveU>>
+
+===
+
+title: slay1
+
+position: -250,160
+---
+
+Pedro: Slaaay!
+
+    <<set $slay to 1>>
+
+    <<jump LoveU>>
+
+===
+
+title: yas1
+
+position: 122,168
+---
+
+Pedro: Yaaas!
+
+    <<set $yas to 1>>
+
+    <<jump LoveU>>
+
+===
+
+title: PedroHappyEnd
+
+position: -77,389
+position: -171,150
+
+---
+
+Pedro: ... I acquiesce 'cause I'm a big slut.
+
+===
