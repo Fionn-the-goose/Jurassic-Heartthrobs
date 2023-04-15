@@ -8,14 +8,16 @@ public class SetNextGoal : MonoBehaviour
     public Transform NextPosition;
     private void OnDrawGizmos() {
         Gizmos.color = Color.blue;
-        Gizmos.DrawSphere(this.transform.position, 6f);
+        Gizmos.DrawSphere(this.transform.position, 5f);
         Gizmos.DrawSphere(NextPosition.position, 2f);
     }
 
     private void OnTriggerEnter(Collider other) {
-        var dino = GetComponent<Dino>();
+        var dino = other.GetComponent<Dino>();
+        Debug.Log("Dino Entert");
+        Debug.Log(other);
         if(dino != null){
-            dino.DinoAgend.destination = transform.position;
+            dino.DinoAgend.destination = new Vector3(NextPosition.position.x + Random.Range(0f, 3f), NextPosition.position.y ,NextPosition.position.z + Random.Range(0f, 3f));
         }
     }
 }

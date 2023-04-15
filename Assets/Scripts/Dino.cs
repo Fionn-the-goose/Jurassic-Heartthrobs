@@ -9,6 +9,5 @@ public class Dino : MonoBehaviour {
         DinoAgend.destination = InitialGoal.position;
     }
     private void Update() {
-        
     }
 }
