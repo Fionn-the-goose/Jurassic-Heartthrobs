@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class PlayerCar : MonoBehaviour {
 
@@ -14,6 +15,9 @@ public class PlayerCar : MonoBehaviour {
 
     [SerializeField]
     private float m_Speed;
+
+    [SerializeField]
+    private Transform m_Kart;
 
     private float m_MaxSpeed = 10f;
 
@@ -32,6 +36,10 @@ public class PlayerCar : MonoBehaviour {
     private Vector3 m_PreSleepAngVel;
 
     private float m_DriftOffset = 0f;
+    private Vector3 m_DashOffsetTarget = Vector3.zero;
+    private Vector3 m_KartInitLocalPos;
+
+    private Coroutine m_DashCoroutine = null;
 
     public float Velocity {
         get => m_RigidBody.velocity.magnitude;
@@ -56,6 +64,7 @@ public class PlayerCar : MonoBehaviour {
     void Start() {
         m_Camera = FindObjectOfType<Camera>();
         m_RigidBody = GetComponent<Rigidbody>();
+        m_KartInitLocalPos = m_Kart.transform.localPosition;
         GameManager.Instance.OnFreezeChange += (bool freeze) => {
             SetFrozen(freeze);
         };
@@ -78,9 +87,11 @@ public class PlayerCar : MonoBehaviour {
             return;
         }
         var delta_t = Time.fixedDeltaTime;
+
         UpdateDrift(delta_t);
-        UpdateMovement(delta_t);
         UpdateDash(delta_t);
+
+        UpdateMovement(delta_t);
     }
 
     void UpdateMovement(float delta_t) {
@@ -108,7 +119,7 @@ public class PlayerCar : MonoBehaviour {
             }
         }
         var delta = target - m_DriftOffset;
-        m_DriftOffset += delta * Time.deltaTime * 4f;
+        m_DriftOffset += delta * delta_t * 4f;
     }
 
     void UpdateDash(float delta_t) {
@@ -117,10 +128,24 @@ public class PlayerCar : MonoBehaviour {
             direction = -1f;
         } else if (m_DashRightAction.action.WasPressedThisFrame()) {
             direction = 1f;
-        } else {
-            return;
         }
-        m_RigidBody.AddForce(m_DashForce * direction * (transform.right + 0.3f * transform.forward), ForceMode.Impulse);
+
+        /*
+        var dash_offset_target = m_DashForce * direction * (transform.right + 0.3f * transform.forward);
+        if (direction != 0f && m_DashCoroutine == null) {
+            m_DashCoroutine = StartCoroutine(DashCoroutine(1f, dash_offset_target));
+        }
+        //var offset_current = m_Kart.transform.localPosition - m_KartInitLocalPos;
+            //+= delta * delta_t * 4f;
+        m_Kart.transform.localPosition = m_KartInitLocalPos;// + m_DashOffsetTarget;
+        //m_DashOffsetTarget *= 0.5f * delta_t;
+        */
+    }
+
+    public IEnumerator DashCoroutine(float duration, Vector3 offset) {
+        m_DashOffsetTarget = offset;
+        yield return new WaitForSeconds(duration);
+        m_DashOffsetTarget = Vector3.zero;
     }
 
     void OnCollisionEnter(Collision collision) {
