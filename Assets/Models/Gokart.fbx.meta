@@ -3,7 +3,57 @@ guid: a028efe2f1ef3614fb63b50313d0dadc
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metall
+    second: {fileID: 2100000, guid: dda1f457ad65c4b44ad1044225e5dd9d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel
+    second: {fileID: 2100000, guid: 147e9b2212b246f46ad3c5bc1bbe1874, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_1
+    second: {fileID: 2100000, guid: dc22c382c4434804d8a38b6817a014b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_1_1
+    second: {fileID: 2100000, guid: 92ef007a5ccd3cb46b90a3885f853205, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_1_2
+    second: {fileID: 2100000, guid: ecd42e35181a2b145a93aea4a44e5aba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_2
+    second: {fileID: 2100000, guid: ed41710912d4a4d4cab5e84d259c8e25, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_2_1
+    second: {fileID: 2100000, guid: 9a56ec49e5be5564e97676bc38c1fe7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_2_2
+    second: {fileID: 2100000, guid: 3f664bb79dffdce4fba24b130cb52776, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_3
+    second: {fileID: 2100000, guid: 295f54317bb14244b9494e045d6bf0da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_3_1
+    second: {fileID: 2100000, guid: 7a75c8429941c29418a27d6e92638243, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

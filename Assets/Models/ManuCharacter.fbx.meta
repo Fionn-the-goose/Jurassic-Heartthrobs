@@ -3,7 +3,27 @@ guid: ab352531a9afa8f4b9dded0361e38e06
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Auge
+    second: {fileID: 2100000, guid: dd6dff8ce8023754787395e98f62e07f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Manu_Brille
+    second: {fileID: 2100000, guid: 305c067c5ca40fd4ca061cf178ead4da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "Manu_K\xF6rper"
+    second: {fileID: 2100000, guid: 4f4a4a77c93217045bc032cd363f06d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "Manu_K\xF6rper_1"
+    second: {fileID: 2100000, guid: fa28df89eb24f884aa1e7b554e78b717, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
