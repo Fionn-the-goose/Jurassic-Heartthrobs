@@ -7,7 +7,7 @@ public class SpinningWheels : MonoBehaviour {
     private float m_TurnSpeed = 80f;
 
     void Update() {
-        var theta = Time.deltaTime * m_TurnSpeed * m_Car.SignedVelocity;
+        var theta = -1f * Time.deltaTime * m_TurnSpeed * m_Car.SignedVelocity;
         transform.Rotate(new Vector3(0, 1, 0), theta);
     }
 }

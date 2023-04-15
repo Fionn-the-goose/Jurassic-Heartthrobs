@@ -4,7 +4,12 @@ public class SteeringWheel : MonoBehaviour {
     [SerializeField]
     private PlayerCar m_Car;
 
+    [SerializeField]
     private float m_MaxAngle = 150f;
+
+    [SerializeField]
+    private Vector3 m_Axis = new Vector3(1, 0, 0);
+
     private float m_TurnSpeed = 4f;
     private float m_TargetAngle = 0f;
     private float m_Angle = 0f;
@@ -20,6 +25,6 @@ public class SteeringWheel : MonoBehaviour {
         var delta = m_TargetAngle - m_Angle;
         m_Angle += delta * Time.deltaTime * m_TurnSpeed;
         //transform.rotation = m_InitialRotation * Quaternion.Euler(m_Angle * new Vector3(1, 0, 0));
-        transform.Rotate((m_Angle - angle_prev) * new Vector3(1, 0, 0));
+        transform.Rotate((m_Angle - angle_prev) * m_Axis);
     }
 }
