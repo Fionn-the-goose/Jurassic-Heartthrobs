@@ -4,7 +4,10 @@ using UnityEngine.InputSystem;
 public class PlayerCar : MonoBehaviour {
 
     [SerializeField]
-    private InputActionReference m_MoveAction;
+    private InputActionReference
+        m_MoveAction,
+        m_DashLeftAction,
+        m_DashRightAction;
 
     [SerializeField]
     private float m_TurnSens;
@@ -46,6 +49,11 @@ public class PlayerCar : MonoBehaviour {
 
     void FixedUpdate() {
         var delta_t = Time.fixedDeltaTime;
+        UpdateMovement(delta_t);
+        UpdateDash(delta_t);
+    }
+
+    void UpdateMovement(float delta_t) {
         var input = m_MoveAction.action.ReadValue<Vector2>();
         var delta_pos = delta_t * m_Speed * transform.forward * input.y;
         var fwd = GoingForward ? 1 : -1;
@@ -53,7 +61,18 @@ public class PlayerCar : MonoBehaviour {
         m_RotAngle += fwd * m_TurnSens * input.x * delta_t * (Velocity/4.5f);
         var rot = Quaternion.AngleAxis(m_RotAngle, transform.up);
         m_RigidBody.MoveRotation(rot);
+    }
 
+    void UpdateDash(float delta_t) {
+        float push = 0f;
+        if (m_DashLeftAction.action.WasPressedThisFrame()) {
+            push = -1f;
+        } else if (m_DashRightAction.action.WasPressedThisFrame()) {
+            push = 1f;
+        } else {
+            return;
+        }
+        m_RigidBody.AddForce(push * transform.right, ForceMode.Impulse);
     }
 
     void OnCollisionEnter(Collision collision) {
