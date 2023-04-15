@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3771074815390793291}
   - component: {fileID: 3771074815390793290}
   - component: {fileID: 2523560733450510137}
+  - component: {fileID: 7944891798755088424}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -163,6 +164,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &7944891798755088424
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3771074815390793281}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2269634, y: 1, z: 1.3794106}
+  m_Center: {x: 0.010247151, y: 0, z: -0.11305278}
 --- !u!1 &3771074816119889603
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,3 +431,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &6434935529687212200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7246758958256659969, guid: 6ca3adf8a7f11db31a105ae4aef70956, type: 3}
+  m_PrefabInstance: {fileID: 4765702147242230103}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2399018978679861591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6434935529687212200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f21a60c85fc3e2b58f164c680ac0031, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Car: {fileID: 3771074815390793291}

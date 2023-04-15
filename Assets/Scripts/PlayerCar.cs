@@ -24,6 +24,10 @@ public class PlayerCar : MonoBehaviour {
         get => Velocity * (GoingForward ? 1f : -1f);
     }
 
+    public float SteeringInput {
+        get => m_MoveAction.action.ReadValue<Vector2>().x;
+    }
+
     public bool GoingForward {
         get {
             // forward = 0. reverse = 180
