@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Metall
+  m_Name: Wheel 1
   m_Shader: {fileID: -6465566751694194690, guid: f2d3e6f881a1ec69cb94d5da9be36de7, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -41,7 +41,7 @@ Material:
     - _RimThreshold: 0.2
     - _Smoothstep: 0.01
     m_Colors:
-    - _Color: {r: 0.5477038, g: 0.61401576, b: 0.6415094, a: 0}
+    - _Color: {r: 0.2924528, g: 0.27753788, b: 0.26348343, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &831418848891018460
 MonoBehaviour:
