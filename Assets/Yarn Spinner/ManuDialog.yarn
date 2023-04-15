@@ -1,5 +1,6 @@
 ﻿title: ManuStart
 
+position: -295,-219
 ---
 
 → Player: Nice hat.
@@ -44,6 +45,7 @@ Manu: *unintelligible*
 
 title: rejectManu
 
+position: -299,171
 ---
 
 Manu: No.
@@ -52,6 +54,7 @@ Manu: No.
 
 title: Kant
 
+position: -12,36
 ---
 
 Manu: Es ist überall nichts in der Welt, ja überhaupt auch außer derselben zu denken möglich, was ohne Einschränkungen für gut könnte gehalten werden, als allein ein guter Wille.
@@ -104,6 +107,7 @@ Manu: Es ist überall nichts in der Welt, ja überhaupt auch außer derselben zu
 
 title: ManuHappyEnd
 
+position: 292,-9
 ---
 
 Manu: I will go out with you.
