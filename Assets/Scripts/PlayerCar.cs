@@ -27,6 +27,10 @@ public class PlayerCar : MonoBehaviour {
     private Camera m_Camera;
     private float m_RotAngle = 0f;
 
+    private bool m_Sleeping = false;
+    private Vector3 m_PreSleepVel;
+    private Vector3 m_PreSleepAngVel;
+
     public float Velocity {
         get => m_RigidBody.velocity.magnitude;
     }
@@ -50,6 +54,18 @@ public class PlayerCar : MonoBehaviour {
     void Start() {
         m_Camera = FindObjectOfType<Camera>();
         m_RigidBody = GetComponent<Rigidbody>();
+    }
+
+    void Freeze(bool freeze) {
+        if (freeze) {
+            m_PreSleepVel = m_RigidBody.velocity;
+            m_PreSleepAngVel = m_RigidBody.angularVelocity;
+            m_RigidBody.isKinematic = true;
+        } else {
+            m_RigidBody.isKinematic = false;
+            m_RigidBody.AddForce(m_PreSleepVel, ForceMode.VelocityChange);
+            m_RigidBody.AddTorque(m_PreSleepAngVel, ForceMode.VelocityChange);
+        }
     }
 
     void FixedUpdate() {
