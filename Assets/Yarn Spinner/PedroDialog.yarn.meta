@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 6d128c0f36ce38547acc077731452721
+=======
+guid: 90e1f291629f8a0768ef5b4406aacc37
+>>>>>>> 9efc18e (dino Prfabs base)
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
