@@ -37,8 +37,8 @@ Material:
     - _Glossiness: 30.8
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RimAmount: 0.5
-    - _RimThreshold: -0.37
+    - _RimAmount: 0.7
+    - _RimThreshold: 0.2
     - _Smoothstep: 0.01
     m_Colors:
     - _Color: {r: 0.2924528, g: 0.27753788, b: 0.26348343, a: 0}
