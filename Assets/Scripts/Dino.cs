@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.AI;
 public class Dino : MonoBehaviour {
     public string Name;
-    private NavMeshAgent DinoAgend;
+    public NavMeshAgent DinoAgend{get; set;}
     private void Start() {
         DinoAgend = GetComponent<NavMeshAgent>();
     }
