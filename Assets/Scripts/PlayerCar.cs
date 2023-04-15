@@ -65,6 +65,7 @@ public class PlayerCar : MonoBehaviour {
         m_Camera = FindObjectOfType<Camera>();
         m_RigidBody = GetComponent<Rigidbody>();
         m_KartInitLocalPos = m_Kart.transform.localPosition;
+        m_RotAngle = transform.rotation.eulerAngles.y;
         GameManager.Instance.OnFreezeChange += (bool freeze) => {
             SetFrozen(freeze);
         };
