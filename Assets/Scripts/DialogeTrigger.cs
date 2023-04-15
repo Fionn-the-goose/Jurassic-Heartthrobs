@@ -9,7 +9,7 @@ public class DialogeTrigger : MonoBehaviour {
         var date = other.GetComponent<Dino>();
         if(date != null){
             Debug.Log(date.name + "Start");
-/*             Time.timeScale = 0f;*/
+            Time.timeScale = 0.05f;
             dialogueRunner.StartDialogue(date.name + "Start");
         }
     }
