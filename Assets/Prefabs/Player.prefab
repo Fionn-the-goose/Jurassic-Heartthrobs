@@ -125,7 +125,7 @@ MonoBehaviour:
   m_DashRightAction: {fileID: -4226720762161748932, guid: 3e089a02493b464e386d7b740354b194, type: 3}
   m_TurnSens: 100
   m_Speed: 300
-  m_DashForce: 10
+  m_DashForce: 30
   m_BounceOutOfBounds: 1
 --- !u!114 &3771074815390793290
 MonoBehaviour:

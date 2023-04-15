@@ -54,9 +54,12 @@ public class PlayerCar : MonoBehaviour {
     void Start() {
         m_Camera = FindObjectOfType<Camera>();
         m_RigidBody = GetComponent<Rigidbody>();
+        GameManager.Instance.OnFreezeChange += (bool freeze) => {
+            SetFrozen(freeze);
+        };
     }
 
-    void Freeze(bool freeze) {
+    void SetFrozen(bool freeze) {
         if (freeze) {
             m_PreSleepVel = m_RigidBody.velocity;
             m_PreSleepAngVel = m_RigidBody.angularVelocity;
