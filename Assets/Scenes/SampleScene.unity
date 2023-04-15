@@ -415,6 +415,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleTrack
       objectReference: {fileID: 0}
+    - target: {fileID: 5148817236446094103, guid: 85efa34675d21aa5baae721edb7a7cd8, type: 3}
+      propertyPath: m_TagString
+      value: Track
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85efa34675d21aa5baae721edb7a7cd8, type: 3}
 --- !u!1 &1052076969
@@ -590,7 +594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3771074815390793285, guid: f60a34815905e901b98c512696ee1692, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.83
+      value: 0.917
       objectReference: {fileID: 0}
     - target: {fileID: 3771074815390793285, guid: f60a34815905e901b98c512696ee1692, type: 3}
       propertyPath: m_LocalPosition.z
@@ -706,7 +710,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1630851326}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5046260af0b649b0aa24b7bd34651bcb, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4

@@ -52,4 +52,15 @@ public class PlayerCar : MonoBehaviour {
         m_RigidBody.MoveRotation(rot);
 
     }
+
+    void OnCollisionEnter(Collision collision) {
+        if (!collision.gameObject.CompareTag("Track")) {
+            return;
+        }
+        foreach (ContactPoint contact in collision.contacts) {
+            Debug.DrawRay(contact.point, contact.normal, Color.white);
+        }
+        Debug.Log(collision.relativeVelocity.magnitude);
+    }
+
 }
