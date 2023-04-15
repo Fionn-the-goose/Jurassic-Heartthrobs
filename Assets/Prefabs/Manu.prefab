@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5062938854358640724}
   - component: {fileID: 5062938854358640727}
   - component: {fileID: 5062938854358640726}
-  - component: {fileID: 5062938854358640721}
   - component: {fileID: 5062938854358640723}
   - component: {fileID: 5062938854358640722}
   - component: {fileID: 5062938854358640685}
@@ -90,22 +89,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &5062938854358640721
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5062938854358640684}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &5062938854358640723
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -145,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Manu
+  InitialGoal: {fileID: 0}
 --- !u!195 &2675502852659442222
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -153,7 +137,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5062938854358640684}
   m_Enabled: 1
-  m_AgentTypeID: -1372625422
+  m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
   m_Acceleration: 8
@@ -164,7 +148,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 1
-  m_BaseOffset: 0.5
+  m_BaseOffset: 0.68
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!1001 &2305719046582723904
