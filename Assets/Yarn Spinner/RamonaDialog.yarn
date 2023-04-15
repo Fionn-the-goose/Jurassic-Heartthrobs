@@ -1,0 +1,276 @@
+title: RamonaStart
+
+---
+
+Ramona: Hey, I got some advice for you!
+Player: Huh?
+Ramona: But first you have to tell me a bit about yourself!
+Player: Uh, okay...
+Ramona: What's your favourite colour?
+
+-> Player: Darkgreen.
+    <<set $colour to "green">>
+-> Player: Purple.
+    <<set $colour to "purple">>
+-> Player: Lightblue.
+    <<set $colour to "blue">>
+-> Player: Maroon.
+    <<set $colour to "red">>
+-> Player: Mandarinorange.
+    <<set $colour to "orange">>
+
+Ramona: What's your favourite way to spend the weekend?
+
+-> Player: Hiking.
+    <<set $week to "hike">>
+-> Player: Playing video games.
+    <<set $week to "games">>
+-> Player: Chilling at the park.
+    <<set $week to "park">>
+-> Player: Eating cake.
+    <<set $week to "cake">>
+-> Player: Reading a book.
+    <<set $week to "book">>
+
+Ramona: If you were an animal, which one would you be?
+-> Player: An ocelot.
+    <<set $animal to "ocelot">>
+-> Player: A swan.
+    <<set $animal to "swan">>
+-> Player: A worm.
+    <<set $animal to "worm">>
+-> Player: A hippo.
+    <<set $animal to "hippo">>
+-> Player: A shark.
+    <<set $animal to "shark">>
+
+Ramona: Favourite music genre?
+-> Player: Emo.
+    <<set $music to "Emo">>
+-> Player: Gothic metal.
+    <<set $music to "Metal">>
+-> Player: Eurobeat.
+    <<set $music to "Beat">>
+-> Player: Jazz-Funk.
+    <<set $music to "Jazz">>
+-> Player: Space disco.
+    <<set $music to "Disco">>
+
+Ramona: Your favourite movie?
+-> Player: Scott Pilgrim vs the world.
+    <<set $movie to "Scott">>
+-> Player: Le Fabuleux Destin d'Amelie Poulain.
+    <<set $movie to "Amelie">>
+-> Player: Breakfast at Tiffany's.
+    <<set $movie to "Tiff">>
+-> Player: 500 Days of Summer
+    <<set $movie to "Summer">>
+-> Player: Eternal Sunshine of the Spotless Mind.
+    <<set $movie to "Sun">>
+
+Ramona: Ever killed someone?
+Player: Huh?
+Ramona: Just kidding *wink*.
+
+Ramona: Who do you pick in a very popular racing cart game?
+-> Player: Pink princess named after a fruit.
+    <<set $kart to "Peach">>
+-> Player: Big mean turtle guy.
+    <<set $kart to "Bowser">>
+-> Player: The dinosaur.
+    <<set $kart to "Yoshi">>
+-> Player: Funny italian green plumber guy.
+    <<set $kart to "Luigi">>
+-> Player: Small mushroom creature.
+    <<set $kart to "Toad">>
+
+<<set $ran to dice(3)>>
+
+<<if $ran == 1>>
+    Ramona: You should get out more! Live a little! Do something spontaneous once in a while! Adventure is the spice of life!
+<<elseif $ran == 2>>
+    Ramona: Stop brooding all the time, silly! Cynicism is for losers! Be more optimistic, life is a playground!
+<<elseif $ran == 3>>
+    Ramona: Come out of your shell! Be the quirky person you really are! Maybe learn to play the ukulele! Go wild!
+<<endif>>
+
+Player: What does that have to do with anything I just said?
+
+Ramona: Haha, don't worry about it.
+
+Player: Okaaay, I think if we're going to date, I should also learn a bit about you.
+
+<<set $RCo to 0>>
+<<set $RWe to 0>>
+<<set $RKa to 0>>
+<<set $RMu to 0>>
+<<set $RMo to 0>>
+<<set $RAn to 0>>
+
+    <<jump what>>
+
+===
+
+title: what
+
+---
+
+-> Player: What colour was your hair before you dyed it pink?<<if $RCo == 0>>
+    <<set $RCo to 1>>
+    <<jump RamonaColour>>
+-> Player: What is your favourite song? <<if $RWe == 0>>
+    <<set $RWe to 1>>
+    <<jump RamonaWeekend>>
+-> Player: What is your favourite Halloween costume?<<if $RKa == 0>>
+    <<set $RKa to 1>>
+    <<jump RamonaKart>>
+-> Player: What movie character do you identify with? <<if $RMo== 0>>
+    <<set $RMo to 1>>
+    <<jump RamonaMovie>>
+-> Player: What is your ringtone? <<if $RMu == 0>>
+    <<set $RMu to 1>>
+    <<jump RamonaMusic>>
+-> Player: How do you want to die? <<if $RAn == 0>>
+    <<set $RAn to 1>>
+    <<jump RamonaAnimal>>
+-> Player: Wait a damn minute... <<if $RCo + $Rwe + $RKa + $RMo + $RMu + $RAn > 2>>
+    <<jump RamonaWtf>>
+===
+title: RamonaColour
+---
+<<if $colour == "blue">>
+    Ramona: Lightblue.
+<<elseif $colour == "red">>
+    Ramona: Maroon.
+<<elseif $colour == "orange">>
+    Ramona: Mandarinorange.
+<<elseif $colour == "green">>
+    Ramona: Darkgreen.
+<<elseif $colour == "purple">>
+    Ramona: Purple.
+<<endif>>
+    <<jump what>>
+===
+title: RamonaWeekend
+---
+<<if $week == "book">>
+    Ramona: "Books from boxes" by Maximo Park.
+<<elseif $week == "games">>
+    Ramona: "Video Games" by Lana del Rey.
+<<elseif $week == "hike">>
+    Ramona: "Hike" by Hauschka.
+<<elseif $week == "park">>
+    Ramona: "A Walk in the Park" by the Nick Strater Band.
+<<elseif $week == "cake">>
+    Ramona: "Cake by the Ocean" by DNCE.
+<<endif>>
+    <<jump what>>
+===
+title: RamonaKart
+---
+<<if $kart == "Bowser">>
+    Ramona: A turtle.
+<<elseif $kart == "Yoshi">>
+    Ramona: A dinosaur.
+<<elseif $kart == "Peach">>
+    Ramona: A princess.
+<<elseif $kart == "Luigi">>
+    Ramona: A plumber.
+<<elseif $kart == "Toad">>
+    Ramona: A mushroom.
+<<endif>>
+    <<jump what>>
+===
+title: RamonaMovie
+---
+<<if $movie == "Summer">>
+    Ramona: Summer Finn.
+<<elseif $movie == "Sun">>
+    Ramona: Clementine Kruczynski.
+<<elseif $movie == "Scott">>
+    Ramona: Ramona Flowers.
+<<elseif $movie == "Amelie">>
+    Ramona: Amelie Poulain.
+<<elseif $movie == "Tiff">>
+    Ramona: Holly Golightly.
+<<endif>>
+    <<jump what>>
+===
+title: RamonaMusic
+---
+<<if $music == "Jazz">>
+    Ramona: A song by my favourite Jazz-Funk band, you probably don't know them...
+<<elseif $music == "Disco">>
+    Ramona: Ramona: A song by my favourite Space disco band, you probably don't know them...
+<<elseif $music == "Beat">>
+    Ramona: Ramona: A song by my favourite Eurobeat band, you probably don't know them...
+<<elseif $music == "Emo">>
+    Ramona: Ramona: A song by my favourite Emo band, you probably don't know them...
+<<elseif $music == "Metal">>
+    Ramona: Ramona: A song by my favourite Gothic metal band, you probably don't know them...
+<<endif>>
+    <<jump what>>
+===
+title: RamonaAnimal
+---
+<<if $animal == "hippo">>
+    Ramona: Being trampled by a hippo.
+<<elseif $animal == "worm">>
+    Ramona: Idc as long as the worms get to eat me when I"m dead.
+<<elseif $animal == "ocelot">>
+    Ramona: Being eaten alive by a wildcat, maybe an ocelot?
+<<elseif $animal == "shark">>
+    Ramona: Swimming in the sea and having a shark just snack me.
+<<elseif $animal == "swan">>
+    Ramona: One word. 
+    Ramona: Swans.
+<<endif>>
+    <<jump what>>
+===
+title: RamonaWtf
+---
+Player: ...
+Player: Are you answering my questions based on what I saif when you questioned me earlier?
+Ramona: ...
+Ramona: ...yeah.
+Ramona: It's just that...
+Ramona: Relationships feel safer if I adjust myself completely to the needs of my partner.
+Ramona: If I focus completely on giving their life a new meaning, I don't have to confront my own problems.
+Ramona: And they can't reject me because of my real personality and opinions.
+Ramona: ... that's pathetic, isn't it? 
+
+-> Player: Kind of.
+-> Player: A bit.
+-> Player: Yeah.
+
+Player: But it's not to late to find your own path in life! 
+Ramona: Maybe but I also really wanna still date people...
+Player: Well, we can date and I will be there if you need help figuring out your life.
+<<if $Elim == true>>
+    Elim: Me too!
+<<if $Mark == true>>
+    Mark: Me too!
+<<if $Niamh == true>>
+    Niamh: Me too!
+<<if $Manu == true>>
+    Manu: Me too!
+<<if $Pedro == true>>
+    Pedro: Oh what the heck... me too!
+<<endif>>
+Ramona: Sounds good!
+Ramona:...
+Ramona: Can I tell you a secret?
+Ramona: ...
+<<if $movie == "Summer">>
+    Ramona: I think "500 Days of Summer" really sucks.
+<<elseif $movie == "Sun">>
+    Ramona: I think "Eternal Sunshine of the Spotless Mind" really sucks.
+<<elseif $movie == "Scott">>
+    Ramona: I think "Scott Pilgrim vs the the World" really sucks.
+<<elseif $movie == "Amelie">>
+    Ramona: I think "Le Fabuleux Destin d'Amelie Poulain" really sucks.
+<<elseif $movie == "Tiff">>
+    Ramona: I think "Breakfast at Tiffany's" really sucks.
+<<endif>> 
+    Player: And I still want to date you anyways. *wink*
+===
