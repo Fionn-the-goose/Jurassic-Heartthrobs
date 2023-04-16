@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18029143, g: 0.22572419, b: 0.30693057, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1001,6 +1001,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6736964512376034153, guid: f60a34815905e901b98c512696ee1692, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 6736964512376034153, guid: f60a34815905e901b98c512696ee1692, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.007
+      objectReference: {fileID: 0}
+    - target: {fileID: 6736964512376034153, guid: f60a34815905e901b98c512696ee1692, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.328
+      objectReference: {fileID: 0}
     - target: {fileID: 8120023308956932589, guid: f60a34815905e901b98c512696ee1692, type: 3}
       propertyPath: dialogueRunner
       value: 
@@ -1857,6 +1869,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3342347312149374307, guid: 13c699599c3111b60bf72ea01bebd73c, type: 3}
+      propertyPath: m_RotationAtRest.y
+      value: -89.999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 3342347312149374307, guid: 13c699599c3111b60bf72ea01bebd73c, type: 3}
+      propertyPath: m_RotationOffset.x
+      value: 10.837985
+      objectReference: {fileID: 0}
+    - target: {fileID: 3342347312149374307, guid: 13c699599c3111b60bf72ea01bebd73c, type: 3}
+      propertyPath: m_RotationOffset.y
+      value: -89.12624
+      objectReference: {fileID: 0}
+    - target: {fileID: 3342347312149374307, guid: 13c699599c3111b60bf72ea01bebd73c, type: 3}
+      propertyPath: m_RotationOffset.z
+      value: 175.54936
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13c699599c3111b60bf72ea01bebd73c, type: 3}
 --- !u!1001 &7431194935612665567
@@ -1987,6 +2015,30 @@ PrefabInstance:
       propertyPath: InitialGoal
       value: 
       objectReference: {fileID: 656830692}
+    - target: {fileID: 6942774889509367948, guid: d40434727c55508208f36902c7d9c385, type: 3}
+      propertyPath: m_RotationAtRest.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942774889509367948, guid: d40434727c55508208f36902c7d9c385, type: 3}
+      propertyPath: m_RotationAtRest.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942774889509367948, guid: d40434727c55508208f36902c7d9c385, type: 3}
+      propertyPath: m_RotationAtRest.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942774889509367948, guid: d40434727c55508208f36902c7d9c385, type: 3}
+      propertyPath: m_RotationOffset.x
+      value: 10.837967
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942774889509367948, guid: d40434727c55508208f36902c7d9c385, type: 3}
+      propertyPath: m_RotationOffset.y
+      value: -89.12622
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942774889509367948, guid: d40434727c55508208f36902c7d9c385, type: 3}
+      propertyPath: m_RotationOffset.z
+      value: 175.54936
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d40434727c55508208f36902c7d9c385, type: 3}
 --- !u!1001 &8189786264790541072
@@ -2051,6 +2103,22 @@ PrefabInstance:
     - target: {fileID: 1404951910959353712, guid: 12ad885997668f0a9be056100550eb6f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886429026571165614, guid: 12ad885997668f0a9be056100550eb6f, type: 3}
+      propertyPath: m_RotationAtRest.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886429026571165614, guid: 12ad885997668f0a9be056100550eb6f, type: 3}
+      propertyPath: m_RotationOffset.x
+      value: 10.837968
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886429026571165614, guid: 12ad885997668f0a9be056100550eb6f, type: 3}
+      propertyPath: m_RotationOffset.y
+      value: -89.12622
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886429026571165614, guid: 12ad885997668f0a9be056100550eb6f, type: 3}
+      propertyPath: m_RotationOffset.z
+      value: 175.54936
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12ad885997668f0a9be056100550eb6f, type: 3}
