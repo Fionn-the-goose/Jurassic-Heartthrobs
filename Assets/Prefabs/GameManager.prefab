@@ -52,4 +52,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e076fafcfc607d01c9d868979b2e925e, type: 3}
   - {fileID: 8300000, guid: 50e7a01559be349fc8176e4b301707e1, type: 3}
   - {fileID: 8300000, guid: e9ed88c19d1817afa81e89d735f7df0e, type: 3}
+  - {fileID: 8300000, guid: eb08367228ee26e808f4b12f9a4e9a73, type: 3}
+  - {fileID: 8300000, guid: 649ed846786f30d66ab1c880ca9e2ae7, type: 3}
   CurrentDino: 

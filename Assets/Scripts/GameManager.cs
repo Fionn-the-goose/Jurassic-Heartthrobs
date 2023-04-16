@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour {
     private List<AudioClip> m_Music = new List<AudioClip>();
 
     private AudioSource m_MusicSource;
+    private AudioSource m_FXSource;
 
     private List<string> m_Dates = new List<string>();
 
@@ -35,7 +36,9 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         m_MusicSource = GameObject.Find("CM vcam1").GetComponent<AudioSource>();
+        m_FXSource = GameObject.Find("FX Source").GetComponent<AudioSource>();
         ChangeMusic("RacingMusic");
+        PlaySFX("SoundSmash");
     }
 
     public void SetFrozen(bool freeze) {
@@ -70,6 +73,7 @@ public class GameManager : MonoBehaviour {
     public static void DateFail(string dinoName) {
         SetupUI(dinoName, hide: true, smash: false);
         ChangeMusic("RacingMusic");
+        PlaySFX("SoundFail");
     }
 
     [YarnCommand("change_music")]
@@ -85,6 +89,20 @@ public class GameManager : MonoBehaviour {
             Instance.m_MusicSource.Stop();
             Instance.m_MusicSource.PlayOneShot(clip);
             Instance.m_MusicSource.loop = true;
+        }
+    }
+
+    [YarnCommand("play_sfx")]
+    public static void PlaySFX(string name) {
+        AudioClip clip = null;
+        foreach (var c in Instance.m_Music) {
+            if (c.name == name) {
+                clip = c;
+                break;
+            }
+        }
+        if (clip != null) {
+            Instance.m_FXSource.PlayOneShot(clip);
         }
     }
 
