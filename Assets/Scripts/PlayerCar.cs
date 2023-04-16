@@ -151,8 +151,10 @@ public class PlayerCar : MonoBehaviour {
     void UpdateDash(float delta_t) {
         if (m_DashLeftAction.action.WasPressedThisFrame()) {
             m_Animator.SetTrigger("DashLeft");
+            m_RigidBody.AddForce(30f * Vector3.left, ForceMode.Impulse);
         } else if (m_DashRightAction.action.WasPressedThisFrame()) {
             m_Animator.SetTrigger("DashRight");
+            m_RigidBody.AddForce(30f * Vector3.right, ForceMode.Impulse);
         }
     }
 

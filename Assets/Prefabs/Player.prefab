@@ -341,7 +341,9 @@ MonoBehaviour:
   m_DriftAction: {fileID: 0}
   m_TurnSens: 100
   m_Speed: 450
+  m_DialougeMemory: {fileID: 0}
   m_Kart: {fileID: 9174521298911918689}
+  DinoCoins: 0
   m_DashForce: 30
   m_BounceOutOfBounds: 1
 --- !u!114 &3771074815390793290
@@ -983,6 +985,10 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 8775727253794426281}
+    - target: {fileID: 1358941477913826738, guid: f5400e92214307359851f3c6712fadee, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 7090215332371842148, guid: f5400e92214307359851f3c6712fadee, type: 3}
       propertyPath: m_RootOrder
       value: 0
