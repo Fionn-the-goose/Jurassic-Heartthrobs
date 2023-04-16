@@ -48,7 +48,7 @@ public class PlayerCar : MonoBehaviour {
     private Vector3 m_KartInitLocalPos;
 
     private Coroutine m_DashCoroutine = null;
-
+    private Coroutine m_BoostCoroutine = null;
     public float Velocity {
         get => m_RigidBody.velocity.magnitude;
     }
@@ -57,6 +57,9 @@ public class PlayerCar : MonoBehaviour {
         get => Velocity * (GoingForward ? 1f : -1f);
     }
 
+    public void Boost(float duration){
+        StartCoroutine(BoostCoroutine(duration));
+    }
     public float SteeringInput {
         get => m_MoveAction.action.ReadValue<Vector2>().x;
     }
@@ -151,18 +154,17 @@ public class PlayerCar : MonoBehaviour {
     void UpdateDash(float delta_t) {
         if (m_DashLeftAction.action.WasPressedThisFrame()) {
             m_Animator.SetTrigger("DashLeft");
-            m_RigidBody.AddForce(30f * Vector3.left, ForceMode.Impulse);
+            m_RigidBody.AddForce(30f * -(transform.right) , ForceMode.Impulse);
         } else if (m_DashRightAction.action.WasPressedThisFrame()) {
             m_Animator.SetTrigger("DashRight");
-            m_RigidBody.AddForce(30f * Vector3.right, ForceMode.Impulse);
+            m_RigidBody.AddForce(30f * transform.right, ForceMode.Impulse);
         }
     }
-
-    public IEnumerator DashCoroutine(float duration, Vector3 offset) {
-        m_DashOffsetTarget = offset;
+    public IEnumerator BoostCoroutine(float duration) {
+        m_RigidBody.AddForce(transform.forward* 100f, ForceMode.Impulse );
         yield return new WaitForSeconds(duration);
-        m_DashOffsetTarget = Vector3.zero;
     }
+
 
     public bool IsDashing() {
         return m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Gocart|CarDashLeft") ||
