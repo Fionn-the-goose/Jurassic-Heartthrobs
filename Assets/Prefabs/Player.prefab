@@ -321,7 +321,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!114 &3771074815390793291
 MonoBehaviour:
@@ -341,7 +341,9 @@ MonoBehaviour:
   m_DriftAction: {fileID: 0}
   m_TurnSens: 100
   m_Speed: 450
+  m_DialougeMemory: {fileID: 0}
   m_Kart: {fileID: 9174521298911918689}
+  DinoCoins: 0
   m_DashForce: 30
   m_BounceOutOfBounds: 1
 --- !u!114 &3771074815390793290
@@ -437,7 +439,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4451094406300068374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -983,33 +985,37 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 8775727253794426281}
+    - target: {fileID: 1358941477913826738, guid: f5400e92214307359851f3c6712fadee, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 7090215332371842148, guid: f5400e92214307359851f3c6712fadee, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7090215332371842148, guid: f5400e92214307359851f3c6712fadee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.000001921358
+      value: 0.0000010979189
       objectReference: {fileID: 0}
     - target: {fileID: 7090215332371842148, guid: f5400e92214307359851f3c6712fadee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.9702287
+      value: 4.3199997
       objectReference: {fileID: 0}
     - target: {fileID: 7090215332371842148, guid: f5400e92214307359851f3c6712fadee, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.7792826
+      value: -9.910001
       objectReference: {fileID: 0}
     - target: {fileID: 7090215332371842148, guid: f5400e92214307359851f3c6712fadee, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.97195977
+      value: -0.9949015
       objectReference: {fileID: 0}
     - target: {fileID: 7090215332371842148, guid: f5400e92214307359851f3c6712fadee, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.23514749
+      value: -0.10085249
       objectReference: {fileID: 0}
     - target: {fileID: 7090215332371842148, guid: f5400e92214307359851f3c6712fadee, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000011920929
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7090215332371842148, guid: f5400e92214307359851f3c6712fadee, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1053,7 +1059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 1.29, z: -2.51}
+  m_FollowOffset: {x: 0, y: 0.88164926, z: -4.304012}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1

@@ -595,7 +595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &858084958
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1097,6 +1097,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3771074815390793291, guid: f60a34815905e901b98c512696ee1692, type: 3}
+      propertyPath: m_DialougeMemory
+      value: 
+      objectReference: {fileID: 3831113772070690399}
     - target: {fileID: 6736964512376034153, guid: f60a34815905e901b98c512696ee1692, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.46
@@ -1279,6 +1283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CM Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 6953055061802119789, guid: 8b137540b07c42dcabc23a758dc67727, type: 3}
+      propertyPath: field of view
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 6953055061802119790, guid: 8b137540b07c42dcabc23a758dc67727, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -1325,6 +1333,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b137540b07c42dcabc23a758dc67727, type: 3}
+--- !u!1001 &1323248087
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1631609562071589946, guid: 5c0346440cadba274b1671dbc2821edf, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631609562071589946, guid: 5c0346440cadba274b1671dbc2821edf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -40.99337
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631609562071589946, guid: 5c0346440cadba274b1671dbc2821edf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631609562071589946, guid: 5c0346440cadba274b1671dbc2821edf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.22939
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631609562071589946, guid: 5c0346440cadba274b1671dbc2821edf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631609562071589946, guid: 5c0346440cadba274b1671dbc2821edf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631609562071589946, guid: 5c0346440cadba274b1671dbc2821edf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631609562071589946, guid: 5c0346440cadba274b1671dbc2821edf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631609562071589946, guid: 5c0346440cadba274b1671dbc2821edf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631609562071589946, guid: 5c0346440cadba274b1671dbc2821edf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631609562071589946, guid: 5c0346440cadba274b1671dbc2821edf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631609562071589947, guid: 5c0346440cadba274b1671dbc2821edf, type: 3}
+      propertyPath: m_Name
+      value: DinoCoins
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5c0346440cadba274b1671dbc2821edf, type: 3}
 --- !u!1 &1361502249
 GameObject:
   m_ObjectHideFlags: 0
@@ -2057,7 +2122,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 147e9b2212b246f46ad3c5bc1bbe1874, type: 2}
+  - {fileID: 2100000, guid: dd6dff8ce8023754787395e98f62e07f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
