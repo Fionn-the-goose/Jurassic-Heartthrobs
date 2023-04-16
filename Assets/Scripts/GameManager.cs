@@ -2,6 +2,7 @@ using Yarn.Unity;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 using TMPro;
 
@@ -154,4 +155,12 @@ public class GameManager : MonoBehaviour {
         return Instance.m_Dates.Contains(dinoname);
     }
 
+    [YarnCommand("boost_mark")]
+    public static void BoostMark() {
+        foreach (var agent in FindObjectsOfType<NavMeshAgent>()) {
+            if (agent.name == "Mark") {
+                agent.speed = 7.8f;
+            }
+        }
+    }
 }
