@@ -19,10 +19,12 @@ public class DialogeTrigger : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         var date = other.GetComponent<Dino>();
         Debug.Log($"dashing? {m_Car.IsDashing()}");
-        if (date != null && !dialogueRunner.IsDialogueRunning
-                && m_LastInteracton + COOLDOWN < Time.fixedTime
-                && m_Car.IsDashing()) {
-            TriggerDialogue(date.name);
+        if (date != null && !dialogueRunner.IsDialogueRunning) {
+            if (m_Car.IsDashing() && m_LastInteracton + COOLDOWN < Time.fixedTime) {
+                TriggerDialogue(date.name);
+            } else {
+                GameManager.PlaySFX("SoundCrash");
+            }
         }
     }
 
@@ -34,6 +36,7 @@ public class DialogeTrigger : MonoBehaviour {
         GameManager.Instance.SetFrozen(true);
         dialogueRunner.StartDialogue(date_name + "Start");
         GameManager.ChangeMusic("Music" + date_name);
+        GameManager.PlaySFX("SoundSmash");
     }
 
     private void Update() {
