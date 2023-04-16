@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour {
             source.Stop();
             source.clip = clip;
             if (is_music) {
-                source.volume = name == "RacingMusic" ? 1f : 0.5f;
+                source.volume = name == "RacingMusic" ? 1f : 0.4f;
             }
             source.Play();
             source.loop = true;
