@@ -50,6 +50,7 @@ position: -51,-8
     <<endif>>
 -> Player: Ok, bye.
     Pedro: Bye bye.
+        <<date_fail Pedro>>
 
 ===
 

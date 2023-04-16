@@ -26,6 +26,8 @@ title: ElimQuestions
 -> Player: And who are you? <<if visited("dinos") == true and visited("maniacs") == true and visited("make") == true>>
     <<jump ElimReveal>>
 -> Player: Thanks, I'll continue with the dating and racing.
+    <<date_fail Elim>>
+    
 ===
 
 title: dinos

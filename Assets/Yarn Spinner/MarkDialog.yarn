@@ -121,6 +121,8 @@ Mark: Oh, if you think that's weird, that might be a dealbreaker.
 
 Mark: I'll have to think about this...
 
+    <<date_fail Mark>>
+
 ===
 
 title: MarkHappyEnd

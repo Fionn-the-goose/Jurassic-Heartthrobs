@@ -36,6 +36,7 @@ Manu: *unintelligible muttering*
 -> Player: Did you just call me Kant? Like the philosopher?
 	<<jump Kant>>
 -> Player: Well, fuck you too.
+	<<date_fail Manu>>
 
 ===
 
