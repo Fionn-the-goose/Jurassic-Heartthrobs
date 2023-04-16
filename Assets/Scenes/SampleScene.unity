@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.24531579, g: 0.4072572, b: 0.34516668, a: 1}
+  m_IndirectSpecularColor: {r: 0.24535449, g: 0.4071657, b: 0.34518012, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1317,11 +1317,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9153128239531387326, guid: 2f0d3929b2cd74ae19386533c2aee4c7, type: 3}
       propertyPath: m_RotationAtRest.x
-      value: -0.08829831
+      value: -0.088298306
       objectReference: {fileID: 0}
     - target: {fileID: 9153128239531387326, guid: 2f0d3929b2cd74ae19386533c2aee4c7, type: 3}
       propertyPath: m_RotationOffset.x
-      value: 10.926003
+      value: 10.926002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f0d3929b2cd74ae19386533c2aee4c7, type: 3}
@@ -2342,7 +2342,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dda1f457ad65c4b44ad1044225e5dd9d, type: 2}
+  - {fileID: 2100000, guid: c829722a6913c590c8c797d010280281, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3286,7 +3286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6942774889509367948, guid: d40434727c55508208f36902c7d9c385, type: 3}
       propertyPath: m_RotationOffset.x
-      value: 10.837967
+      value: 10.837965
       objectReference: {fileID: 0}
     - target: {fileID: 6942774889509367948, guid: d40434727c55508208f36902c7d9c385, type: 3}
       propertyPath: m_RotationOffset.y
@@ -4312,7 +4312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8886429026571165614, guid: 12ad885997668f0a9be056100550eb6f, type: 3}
       propertyPath: m_RotationOffset.x
-      value: 10.837968
+      value: 10.837969
       objectReference: {fileID: 0}
     - target: {fileID: 8886429026571165614, guid: 12ad885997668f0a9be056100550eb6f, type: 3}
       propertyPath: m_RotationOffset.y

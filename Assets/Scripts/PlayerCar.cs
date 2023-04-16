@@ -46,7 +46,7 @@ public class PlayerCar : MonoBehaviour {
     private float m_DriftOffset = 0f;
     private Vector3 m_DashOffsetTarget = Vector3.zero;
     private Vector3 m_KartInitLocalPos;
-
+    private AudioSource m_AudioSource;
     private Coroutine m_DashCoroutine = null;
     private Coroutine m_BoostCoroutine = null;
     public float Velocity {
@@ -58,6 +58,7 @@ public class PlayerCar : MonoBehaviour {
     }
 
     public void Boost(float duration){
+        m_AudioSource.Play();
         StartCoroutine(BoostCoroutine(duration));
     }
     public float SteeringInput {
