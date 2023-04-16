@@ -7,13 +7,24 @@ public class DialogeTrigger : MonoBehaviour {
     private bool m_DialogueRunning;
     private float m_LastInteracton = 0f;
     public const float COOLDOWN = 5f;
+    private PlayerCar m_Car;
+
+    void Start() {
+        if (dialogueRunner == null) {
+            dialogueRunner = FindObjectOfType<DialogueRunner>();
+        }
+        m_Car = GetComponent<PlayerCar>();
+    }
 
     private void OnTriggerEnter(Collider other) {
         var date = other.GetComponent<Dino>();
+        Debug.Log($"dashing? {m_Car.IsDashing()}");
         if (date != null && !dialogueRunner.IsDialogueRunning
-                && m_LastInteracton + COOLDOWN < Time.fixedTime) {
+                && m_LastInteracton + COOLDOWN < Time.fixedTime
+                && m_Car.IsDashing()) {
             m_LastInteracton = Time.fixedTime;
             m_DialogueRunning = true;
+            m_Car = GetComponent<PlayerCar>();
             GameManager.Instance.SetFrozen(true);
             dialogueRunner.StartDialogue(date.name + "Start");
         }

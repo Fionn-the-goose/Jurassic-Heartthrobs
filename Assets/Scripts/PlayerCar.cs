@@ -8,7 +8,8 @@ public class PlayerCar : MonoBehaviour {
     private InputActionReference
         m_MoveAction,
         m_DashLeftAction,
-        m_DashRightAction;
+        m_DashRightAction,
+        m_DriftAction;
 
     [SerializeField]
     private float m_TurnSens;
@@ -26,6 +27,8 @@ public class PlayerCar : MonoBehaviour {
 
     [SerializeField]
     private bool m_BounceOutOfBounds = true;
+
+    private Animator m_Animator;
 
     private Rigidbody m_RigidBody;
     private Camera m_Camera;
@@ -66,6 +69,11 @@ public class PlayerCar : MonoBehaviour {
         m_RigidBody = GetComponent<Rigidbody>();
         m_KartInitLocalPos = m_Kart.transform.localPosition;
         m_RotAngle = transform.rotation.eulerAngles.y;
+        var anims = GetComponentsInChildren<Animator>();
+        if (anims.Length != 1) {
+            Debug.LogWarning($"Found {anims.Length} animators for {name}, expected one.  Please make m_Animator of PlayerCar a SerializeField.");
+        }
+        m_Animator = anims[0];
         GameManager.Instance.OnFreezeChange += (bool freeze) => {
             SetFrozen(freeze);
         };
@@ -81,6 +89,9 @@ public class PlayerCar : MonoBehaviour {
             m_RigidBody.AddForce(m_PreSleepVel, ForceMode.VelocityChange);
             m_RigidBody.AddTorque(m_PreSleepAngVel, ForceMode.VelocityChange);
         }
+    }
+
+    void Update() {
     }
 
     void FixedUpdate() {
@@ -114,7 +125,7 @@ public class PlayerCar : MonoBehaviour {
         var input = m_MoveAction.action.ReadValue<Vector2>().x;
         float target = 0f;
         if (Input.GetKey(KeyCode.Space) && Mathf.Abs(input) > 0.5f) {
-            target = Mathf.Sign(input) * 35f;
+            target = Mathf.Sign(input) * 25f;
             if (Input.GetKeyDown(KeyCode.Space)) {
                 m_RigidBody.AddForce(40f * Vector3.up, ForceMode.Impulse);
             }
@@ -129,29 +140,22 @@ public class PlayerCar : MonoBehaviour {
     }
 
     void UpdateDash(float delta_t) {
-        /*float direction = 0f;
         if (m_DashLeftAction.action.WasPressedThisFrame()) {
-            direction = -1f;
+            m_Animator.SetTrigger("DashLeft");
         } else if (m_DashRightAction.action.WasPressedThisFrame()) {
-            direction = 1f;
-        }*/
-
-        /*
-        var dash_offset_target = m_DashForce * direction * (transform.right + 0.3f * transform.forward);
-        if (direction != 0f && m_DashCoroutine == null) {
-            m_DashCoroutine = StartCoroutine(DashCoroutine(1f, dash_offset_target));
+            m_Animator.SetTrigger("DashRight");
         }
-        //var offset_current = m_Kart.transform.localPosition - m_KartInitLocalPos;
-            //+= delta * delta_t * 4f;
-        m_Kart.transform.localPosition = m_KartInitLocalPos;// + m_DashOffsetTarget;
-        //m_DashOffsetTarget *= 0.5f * delta_t;
-        */
     }
 
     public IEnumerator DashCoroutine(float duration, Vector3 offset) {
         m_DashOffsetTarget = offset;
         yield return new WaitForSeconds(duration);
         m_DashOffsetTarget = Vector3.zero;
+    }
+
+    public bool IsDashing() {
+        return m_Animator.GetCurrentAnimatorStateInfo(0).IsName("DashLeft") ||
+            m_Animator.GetCurrentAnimatorStateInfo(0).IsName("DashRight");
     }
 
     void OnCollisionEnter(Collision collision) {
