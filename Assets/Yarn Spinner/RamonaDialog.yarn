@@ -84,6 +84,8 @@ Ramona: Who do you pick in a very popular racing cart game?
 -> Player: Small mushroom creature.
     <<set $kart to "Toad">>
 
+Ramona: Here's my advice for you:
+
 <<declare $ran = 1>>
 <<set $ran to dice(3)>>
 
@@ -247,14 +249,23 @@ Ramona: ... that's pathetic, isn't it?
 Player: But it's not to late to find your own path in life! 
 Ramona: Maybe but I also really wanna still date people...
 Player: Well, we can date and I will be there if you need help figuring out your life.
+
 <<if $Elim == true>>
     Elim: Me too!
+<<endif>>
+
 <<if $Mark == true>>
     Mark: Me too!
+<<endif>>
+
 <<if $Niamh == true>>
     Niamh: Me too!
+<<endif>>
+
 <<if $Manu == true>>
     Manu: Me too!
+<<endif>>
+
 <<if $Pedro == true>>
     Pedro: Oh what the heck... me too!
 <<endif>>

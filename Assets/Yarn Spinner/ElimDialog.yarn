@@ -8,6 +8,7 @@ Elim: Hey, hey, how do you like the game so far?
 -> Player: Idk.
 
 Elim: You got any questions?
+
     <<jump ElimQuestions>>
 
 ===
@@ -66,7 +67,7 @@ title: ManuReveal
     Elim: But they appreciate a good intellectual conversation regardless of philosophical stance.
     Elim: Except if you want to talk about the Frankfurter Schule.
     Elim: They have some kind of beef with those people.
-<<if $Manu == true>>
+<<elseif $Manu == true>>
     Manu: You could have just asked me yourself, you know?
     Manu: Well as you already know my favourite philosopher is Kant.
     Manu: I absolutely detest anyone who subscribes to the believes of the Frankfurter Schule.
@@ -79,6 +80,7 @@ title: ManuReveal
 Elim: Questions about anyone else?
 
 <<jump dinos>>
+
 ===
 
 title: NiamhReveal
@@ -90,7 +92,7 @@ title: NiamhReveal
     Elim: That's probably why she's always so stressed.
     Elim: Oh and she has a special interest for coins.
     Elim: They always catch her attention.
-<<if $Niamh == true>>
+<<elseif $Niamh == true>>
     Niamh: I get it, I've told you more about DinoCoin than about myself.
     Niamh: Next time just ask me directly.
     Niamh: Via mail.
@@ -116,7 +118,7 @@ title: RamonaReveal
 
 <<if $Ramona == false>>
     Elim: Ramona, there's not much to say about her tbh.
-<<if $Ramona == true>>
+<<elseif $Ramona == true>>
     Ramona: My time to shine!
     Ramona: My natural hair colour is dark brown.
     Ramona: It's a pain to bleach but being able to dye it vibrant colours is worth it.
@@ -140,13 +142,13 @@ title: MarkReveal
 
 <<if $Mark == false>>
     Elim: Mark, why are you asking me about him? You two have been friends for ages.
-<<if $Mark == true>>
+<<elseif $Mark == true>>
     Mark: I'm right here, darling.
     Mark: Well, I'll try to tell you something about myself that you don't know yet.
     Mark: I'm so happy to have you as my best friend and I love you so much.
     Mark: I think people are very strange these days.
     Mark: The bank where I work has a new client.
-    Player: Oh what kinda of client.
+    Player: Oh, what kinda of client.
     Mark: I can't tell you, it's confidential.
     Player: Fair point.
     <<if $gender == 1>>
@@ -154,7 +156,7 @@ title: MarkReveal
         Player: *blushes*
     <<endif>>
     Mark: And my best pickup line?
-    Mark: Anyways how is your sexlife?
+    Mark: "Anyways how is your sexlife?"
     Player: ...
     Player: Would have worked on me.
     Mark: Love you.

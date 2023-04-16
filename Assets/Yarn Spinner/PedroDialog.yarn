@@ -1,6 +1,7 @@
 title: PedroStart
 position: -430,-306
 ---
+
 Player: And who are you supposed to be?
 
 Pedro: I am your cool slutty daddy.
@@ -47,6 +48,9 @@ position: -51,-8
         Elim: Hey Pedro, you could date all of us!
         <<jump PedroHappyEnd>>
     <<endif>>
+-> Player: Ok, bye.
+    Pedro: Bye bye.
+
 ===
 
 title: love1
