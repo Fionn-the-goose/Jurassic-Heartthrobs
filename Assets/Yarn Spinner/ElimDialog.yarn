@@ -248,6 +248,7 @@ Elim: You know what, I could use the distraction. And a bit of fun.
 Player: That's good enough for me.
 
 <<set $Elim to true>>
+<<date_success Elim>>
 
 <<if $DinoDate == 0>>
     <<set $DinoDate to 1>>

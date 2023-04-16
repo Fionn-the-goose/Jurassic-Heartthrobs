@@ -115,6 +115,7 @@ position: -171,150
 Pedro: ... I acquiesce 'cause I'm a big slut.
 
 <<set $Pedro to true>>
+<<date_success Pedro>>
 
 <<if $DinoDate == 0>>
     <<set $DinoDate to 1>>

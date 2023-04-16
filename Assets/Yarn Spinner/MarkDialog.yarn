@@ -147,6 +147,7 @@ Player: And I can see myself meeting your mom someday.
 Player: She seems great. Just like her son.
 
 <<set $Mark to true>>
+<<date_success Mark>>
 
 <<if $DinoDate == 0>>
     <<set $DinoDate to 1>>

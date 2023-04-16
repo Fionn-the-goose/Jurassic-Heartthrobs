@@ -112,6 +112,7 @@ Player: Aww sweetheart, I'm sorry, I'll try to act less silly.
 Manu: This is acceptable. <3
 
 <<set $Manu to true>>
+<<date_success Manu>>
 
 <<if $DinoDate == 0>>
     <<set $DinoDate to 1>>

@@ -149,6 +149,7 @@ Player: ...
 Niamh: Just kidding *wink*
 
 <<set $Niamh to true>>
+<<date_success Niamh>>
 
 <<if $DinoDate == 0>>
     <<set $DinoDate to 1>>

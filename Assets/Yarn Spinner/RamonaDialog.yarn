@@ -290,6 +290,7 @@ Ramona: ...
 Player: And I still want to date you anyways. *wink*
 
 <<set $Ramona to true>>
+<<date_success Ramona>>
 
 <<if $DinoDate == 0>>
     <<set $DinoDate to 1>>
