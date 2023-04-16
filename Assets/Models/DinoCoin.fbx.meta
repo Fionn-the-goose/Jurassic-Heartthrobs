@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d9abddfbed54f9643b568d40de8c6ee1
+guid: 35a2f2ffae5ac4e4a8d2934d4c571bd4
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,38 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Auge
-    second: {fileID: 2100000, guid: dd6dff8ce8023754787395e98f62e07f, type: 2}
+      name: DinoCoin 2
+    second: {fileID: 2100000, guid: d96665201523bed4fbd03b13eb405939, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Mark
-    second: {fileID: 2100000, guid: e603b22f2e2bcf746a07eec34a3ca8a5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Mark Body
-    second: {fileID: 2100000, guid: 870d227f05a958b49920bd07e1d9d695, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Mark Cap
-    second: {fileID: 2100000, guid: 3fb58b1dd5dc6c5419409203fed6fe13, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Mark Cap 1
-    second: {fileID: 2100000, guid: 452d2ed80ac204943b6b000e731b289b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Mark Floss
-    second: {fileID: 2100000, guid: c69be0499984394428790fc11fd3dd3a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Mark Tooths
-    second: {fileID: 2100000, guid: 47620c33541f108438ef958c853f6ba3, type: 2}
+      name: DinoCoin_1
+    second: {fileID: 2100000, guid: dcbdb3e101701144489122ae8e405030, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

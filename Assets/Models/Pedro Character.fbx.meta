@@ -3,7 +3,57 @@ guid: cd0a179df392b7848bdd57c3a5a48303
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Auge
+    second: {fileID: 2100000, guid: dd6dff8ce8023754787395e98f62e07f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pedro Body
+    second: {fileID: 2100000, guid: 76a72442f4d8a5c41a0db047789fa140, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pedro Brille 1
+    second: {fileID: 2100000, guid: e8bda394f4c30da49be97af64b06ead9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pedro Hemd
+    second: {fileID: 2100000, guid: 51bd3e47f1dfac04981ce8487ff9f05a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pedro Hemd 1
+    second: {fileID: 2100000, guid: 8d3c2192645fe6148a980717fb152d7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pedro Schnurrbart
+    second: {fileID: 2100000, guid: 7da9db29e67fe644fb13e3310806baf7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pedro Zigarre
+    second: {fileID: 2100000, guid: a4da5fc422b6a964ba5e5d8170254bb6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pedro Zigarre 1
+    second: {fileID: 2100000, guid: d45be5ce4ac294640906bad8fbb48c37, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pedro Zigarre 2
+    second: {fileID: 2100000, guid: dc6717cd70c19cb47aedc7873d978e08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pedro_Brille 1
+    second: {fileID: 2100000, guid: 517db2d363644b940aed7fd2e86279f9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

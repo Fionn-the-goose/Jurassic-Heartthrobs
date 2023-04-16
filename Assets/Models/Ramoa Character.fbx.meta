@@ -3,7 +3,52 @@ guid: 1603b2a93e057b542b56223ded576ca6
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Auge
+    second: {fileID: 2100000, guid: dd6dff8ce8023754787395e98f62e07f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ramona Hoody
+    second: {fileID: 2100000, guid: 7f18c220cb07adf4bb68fc597291cf5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ramona Strain
+    second: {fileID: 2100000, guid: 5ff141a14914418438075b4d12a91d27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ramona Tooths
+    second: {fileID: 2100000, guid: 6685c22ddad57234285f882f7176df97, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ramona_Body
+    second: {fileID: 2100000, guid: f1eb7b8397a5be244a70b10d4f3ba6ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ramona_Body 1
+    second: {fileID: 2100000, guid: 8bcbe3506865a8242bf17095dc4e86d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ramona_Hair
+    second: {fileID: 2100000, guid: d1db3880b0aee054f9f14cbd9a3b2a1a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ramona_Hair 1
+    second: {fileID: 2100000, guid: c9baa8cbc8c9da149b5a6188efda2280, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ramona_Hair 2
+    second: {fileID: 2100000, guid: c972710839f9b294a88dd1843195f1c7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

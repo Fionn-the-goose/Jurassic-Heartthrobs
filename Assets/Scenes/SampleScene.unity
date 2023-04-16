@@ -2122,3 +2122,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12ad885997668f0a9be056100550eb6f, type: 3}
+--- !u!1001 &8869376126989248594
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 573498517142141117, guid: 25667a370dc9e564ca468a4a1fa24395, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 573498517142141117, guid: 25667a370dc9e564ca468a4a1fa24395, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 573498517142141117, guid: 25667a370dc9e564ca468a4a1fa24395, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 573498517142141117, guid: 25667a370dc9e564ca468a4a1fa24395, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 573498517142141117, guid: 25667a370dc9e564ca468a4a1fa24395, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 573498517142141117, guid: 25667a370dc9e564ca468a4a1fa24395, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 573498517142141117, guid: 25667a370dc9e564ca468a4a1fa24395, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 573498517142141117, guid: 25667a370dc9e564ca468a4a1fa24395, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 573498517142141117, guid: 25667a370dc9e564ca468a4a1fa24395, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 573498517142141117, guid: 25667a370dc9e564ca468a4a1fa24395, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 573498517142141117, guid: 25667a370dc9e564ca468a4a1fa24395, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 863907365592281478, guid: 25667a370dc9e564ca468a4a1fa24395, type: 3}
+      propertyPath: m_Name
+      value: DinoCoin
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 25667a370dc9e564ca468a4a1fa24395, type: 3}
