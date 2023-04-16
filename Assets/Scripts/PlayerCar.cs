@@ -92,6 +92,7 @@ public class PlayerCar : MonoBehaviour {
     }
 
     void Update() {
+        UpdateDash(Time.deltaTime);
     }
 
     void FixedUpdate() {
@@ -101,7 +102,6 @@ public class PlayerCar : MonoBehaviour {
         var delta_t = Time.fixedDeltaTime;
 
         UpdateDrift(delta_t);
-        UpdateDash(delta_t);
 
         UpdateMovement(delta_t);
     }
@@ -154,8 +154,8 @@ public class PlayerCar : MonoBehaviour {
     }
 
     public bool IsDashing() {
-        return m_Animator.GetCurrentAnimatorStateInfo(0).IsName("DashLeft") ||
-            m_Animator.GetCurrentAnimatorStateInfo(0).IsName("DashRight");
+        return m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Gocart|CarDashLeft") ||
+            m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Gocart|CarDashRight");
     }
 
     void OnCollisionEnter(Collision collision) {

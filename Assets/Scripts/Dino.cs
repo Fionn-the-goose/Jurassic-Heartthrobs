@@ -9,6 +9,7 @@ public class Dino : MonoBehaviour {
         DinoAgend.destination = InitialGoal.position;
         GameManager.Instance.OnFreezeChange += (bool frozen) => {
             DinoAgend.enabled = !frozen;
+            DinoAgend.GetComponent<Rigidbody>().isKinematic = frozen;
         };
     }
     private void Update() {
