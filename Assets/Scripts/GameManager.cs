@@ -81,6 +81,7 @@ public class GameManager : MonoBehaviour {
         SetupUI(dinoName, hide: true, smash: true);
         ChangeMusic("RacingMusic");
         Instance.m_VoiceSource.Stop();
+        GameObject.Find("Partikel Heart").GetComponentInChildren<ParticleSystem>().Emit(30);
     }
 
     [YarnCommand("date_fail")]

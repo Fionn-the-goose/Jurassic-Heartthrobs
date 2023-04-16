@@ -23,6 +23,9 @@ public class PlayerCar : MonoBehaviour {
     [SerializeField]
     private Transform m_Kart;
 
+    private ParticleSystem m_StarParticles;
+    private ParticleSystem m_HeartParticles;
+
     private float m_MaxSpeed = 10f;
 
     public int DinoCoins = 0;
@@ -82,6 +85,10 @@ public class PlayerCar : MonoBehaviour {
         m_RigidBody = GetComponent<Rigidbody>();
         m_KartInitLocalPos = m_Kart.transform.localPosition;
         m_RotAngle = transform.rotation.eulerAngles.y;
+        m_StarParticles = GameObject.Find("Partikel Star").GetComponent<ParticleSystem>();
+        m_HeartParticles = GameObject.Find("Partikel Heart").GetComponent<ParticleSystem>();
+        m_StarParticles.Stop();
+        m_HeartParticles.Stop();
         var anims = GetComponentsInChildren<Animator>();
         if (anims.Length != 1) {
             Debug.LogWarning($"Found {anims.Length} animators for {name}, expected one.  Please make m_Animator of PlayerCar a SerializeField.");
@@ -97,6 +104,7 @@ public class PlayerCar : MonoBehaviour {
             m_PreSleepVel = m_RigidBody.velocity;
             m_PreSleepAngVel = m_RigidBody.angularVelocity;
             m_RigidBody.isKinematic = true;
+            m_StarParticles.Emit(40);
         } else {
             m_RigidBody.isKinematic = false;
             m_RigidBody.AddForce(m_PreSleepVel, ForceMode.VelocityChange);
@@ -161,11 +169,15 @@ public class PlayerCar : MonoBehaviour {
             m_RigidBody.AddForce(30f * transform.right, ForceMode.Impulse);
         }
     }
+
     public IEnumerator BoostCoroutine(float duration) {
         m_RigidBody.AddForce(transform.forward* 50f, ForceMode.Impulse );
         yield return new WaitForSeconds(duration);
     }
 
+    public void Stonken() {
+        // TODO uwu
+    }
 
     public bool IsDashing() {
         return m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Gocart|CarDashLeft") ||
