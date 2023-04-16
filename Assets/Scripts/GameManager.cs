@@ -26,6 +26,12 @@ public class GameManager : MonoBehaviour {
         OnFreezeChange?.Invoke(freeze);
     }
 
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.M)) {
+            DateSuccess("Manu");
+        }
+    }
+
     [YarnCommand("date_success")]
     public static void DateSuccess(string dinoName) {
         foreach (var p in FindObjectsOfType<DatingPlatform>()) {
