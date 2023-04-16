@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: b9a85108fb320722195b37980b4c862a
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  LastImportHadImplicitStringIDs: 0
+  LastImportHadAnyStrings: 0
+  isSuccessfullyParsed: 0
+  parseErrorMessages:
+  - 'Assets/Yarn Spinner/RamonaDialog.yarn: 276:0: Error: Expected an <<endif>> to
+    match the <<if>> statement on line 255
+
+    ===
+
+    ^^^
+
+'

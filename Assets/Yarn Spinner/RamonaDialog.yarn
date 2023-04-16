@@ -84,6 +84,7 @@ Ramona: Who do you pick in a very popular racing cart game?
 -> Player: Small mushroom creature.
     <<set $kart to "Toad">>
 
+<<declare $ran = 1>>
 <<set $ran to dice(3)>>
 
 <<if $ran == 1>>
@@ -257,10 +258,12 @@ Player: Well, we can date and I will be there if you need help figuring out your
 <<if $Pedro == true>>
     Pedro: Oh what the heck... me too!
 <<endif>>
+
 Ramona: Sounds good!
 Ramona:...
 Ramona: Can I tell you a secret?
 Ramona: ...
+
 <<if $movie == "Summer">>
     Ramona: I think "500 Days of Summer" really sucks.
 <<elseif $movie == "Sun">>
@@ -272,5 +275,22 @@ Ramona: ...
 <<elseif $movie == "Tiff">>
     Ramona: I think "Breakfast at Tiffany's" really sucks.
 <<endif>> 
-    Player: And I still want to date you anyways. *wink*
+    
+Player: And I still want to date you anyways. *wink*
+
+<<set $Ramona to true>>
+
+<<if $DinoDate == 0>>
+    <<set $DinoDate to 1>>
+<<elseif $DinoDate == 1>>
+    <<set $DinoDate to 2>>
+<<elseif $DinoDate == 2>>
+    <<set $DinoDate to 3>>
+<<elseif $DinoDate == 3>>
+    <<set $DinoDate to 4>>
+<<elseif $DinoDate == 4>>
+    <<set $DinoDate to 5>>
+<<elseif $DinoDate == 5>>
+    <<set $DinoDate to 6>>
+<<endif>>
 ===

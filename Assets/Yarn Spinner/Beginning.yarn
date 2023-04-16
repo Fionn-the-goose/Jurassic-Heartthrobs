@@ -1,0 +1,16 @@
+title: BeginGame
+
+---
+
+Tommy Wiseau: If a lot of people love each other, the world would be a better place to live.
+
+<<set $Elim  to false>>
+<<set $Manu  to false>>
+<<set $Mark  to false>>
+<<set $Niamh  to false>>
+<<set $Pedro  to false>>
+<<set $Ramona  to false>>
+
+<<set $DinoDate  to 0>>
+
+===

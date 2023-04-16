@@ -3,41 +3,24 @@ title: ManuStart
 ---
 
 → Player: Nice hat.
-
 → Player: Nice glasses.
-
 → Player: Nice suit.
-
 
 Manu: *unintelligible*
 
-
 → Player: What did you say about my mother?
-
 	Manu: She’s a very nice lady.
-
 	Player: Sooo, you like…
-
 	→ Player: History?
-
 		<<jump rejectManu>>
-
 	→ Player: Pizza?
-
 		<<jump rejectManu>>
-
 	→ Player: Cosplay?
-
 		<<jump rejectManu>>
-
 	→ Player: Philosophy?
-
 		<<jump Kant>>
-
 → Player: Did you just call me Kant? Like the philosopher?
-
 	<<jump Kant>>
-
 → Player: Well, fuck you too.
 
 ===

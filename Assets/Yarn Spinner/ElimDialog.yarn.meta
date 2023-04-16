@@ -1,0 +1,46 @@
+fileFormatVersion: 2
+guid: 8e9bc34e5d1872790ac1fec04280c26f
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  LastImportHadImplicitStringIDs: 0
+  LastImportHadAnyStrings: 0
+  isSuccessfullyParsed: 0
+  parseErrorMessages:
+  - 'Assets/Yarn Spinner/ElimDialog.yarn: 81:0: Error: Expected an <<endif>> to match
+    the <<if>> statement on line 63
+
+    ===
+
+    ^^^
+
+'
+  - 'Assets/Yarn Spinner/ElimDialog.yarn: 110:0: Error: Expected an <<endif>> to
+    match the <<if>> statement on line 87
+
+    ===
+
+    ^^^
+
+'
+  - 'Assets/Yarn Spinner/ElimDialog.yarn: 134:0: Error: Expected an <<endif>> to
+    match the <<if>> statement on line 116
+
+    ===
+
+    ^^^
+
+'
+  - 'Assets/Yarn Spinner/ElimDialog.yarn: 167:0: Error: Expected an <<endif>> to
+    match the <<if>> statement on line 140
+
+    ===
+
+    ^^^
+
+'

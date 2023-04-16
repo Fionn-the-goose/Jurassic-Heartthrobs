@@ -17,9 +17,6 @@ Pedro: I'm just gonna sit here and say I love you and hi and slaaay and yaaas.
 
     <<set $yas to 0>>
 
-    <<set $Elim to true>>
-
-    <<set $DinoDate to 1>>
 
     <<jump LoveU>>
 
@@ -32,34 +29,22 @@ position: -51,-8
 ---
 
 -> Player: You love me? <<if $love == 0>>
-
     <<jump love1>>
-
 -> Player: How do you pronounce "shark" in german? <<if $hi == 0>>
-
     <<jump hi1>>
-
 -> Player: How do I look? <<if $slay == 0>>
-
     <<jump slay1>>
-
 -> Player: Does that mean you don't want to date me right now? <<if $yas == 0>>
-
     <<jump yas1>>
-
 -> Player: Have you met my partner Elim? <<if $Elim == true>>
-
     Pedro: Met? That's my soulmate, bitch!
-
     Pedro: I would follow them everywhere.
-
     Player: What about me?
-
     <<if $DinoDate == 1>>  
-        Elim: You could date both of us?
+        Elim: Hey Pedro, you could date both of us!
             <<jump PedroHappyEnd>>
     <<elseif $DinoDate > 1>>
-        Elim: You could date all of us?
+        Elim: Hey Pedro, you could date all of us!
         <<jump PedroHappyEnd>>
     <<endif>>
 ===
@@ -125,4 +110,19 @@ position: -171,150
 
 Pedro: ... I acquiesce 'cause I'm a big slut.
 
+<<set $Pedro to true>>
+
+<<if $DinoDate == 0>>
+    <<set $DinoDate to 1>>
+<<elseif $DinoDate == 1>>
+    <<set $DinoDate to 2>>
+<<elseif $DinoDate == 2>>
+    <<set $DinoDate to 3>>
+<<elseif $DinoDate == 3>>
+    <<set $DinoDate to 4>>
+<<elseif $DinoDate == 4>>
+    <<set $DinoDate to 5>>
+<<elseif $DinoDate == 5>>
+    <<set $DinoDate to 6>>
+<<endif>>
 ===

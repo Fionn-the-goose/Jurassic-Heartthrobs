@@ -1,35 +1,66 @@
 ﻿title: ManuStart
 
-position: -295,-219
+position: -737,-337
 ---
 -> Player: Nice hat.
 -> Player: Nice glasses.
 -> Player: Nice suit.
 
-
-Manu: *unintelligible*
-
+Manu: *unintelligible muttering*
 
 -> Player: What did you say about my mother?
-    Manu: She's a very nice lady.
-    Player: Sooo, you like…
-    -> Player: History?
-        <<jump rejectManu>>
-    -> Player: Pizza?
-        <<jump rejectManu>>
-    -> Player: Cosplay?
-        <<jump rejectManu>>
-    -> Player: Philosophy?
-        <<jump Kant>>
+	Manu: She's a very nice lady.
+		<<jump like>>
+-> Player: What did you say about Ramona? <<if $Ramona == true>>
+	Manu: She's a very nice lady.
+	Ramona: Thanks!
+		<<jump like>>
+-> Player: What did you say about Mark? <<if $Mark == true>>
+	Manu: He's a very nice guy.
+	Mark: Thanks!
+		<<jump like>>
+-> Player: What did you say about Pedro? <<if $Pedro == true>>
+	Manu: He's a very nice guy.
+	Pedro: Thanks!
+		<<jump like>>
+-> Player: What did you say about Niamh? <<if $Niamh == true>>
+	Manu: She's a very nice lady.
+	Niamh: Thanks!
+		<<jump like>>
+-> Player: What did you say about Elim? <<if $Elim == true>>
+	Manu: They're a very nice person.
+	Elim: Thanks!
+		<<jump like>>
 -> Player: Did you just call me Kant? Like the philosopher?
-    <<jump Kant>>
+	<<jump Kant>>
 -> Player: Well, fuck you too.
+
+===
+
+title: like
+
+position: -144,-369
+---
+
+Player: Sooo, you like…
+	-> Player: Coins?
+		<<jump rejectManu>>
+	-> Player: Video Games?
+		<<jump rejectManu>>
+	-> Player: The three ??? ?
+		<<jump rejectManu>>
+	-> Player: Philosophy?
+		<<jump Kant>>
+	-> Player: The Last of Us?
+		<<jump rejectManu>>
+	-> Player: "Riptide" by Vance Joy?
+		<<jump rejectManu>>
 
 ===
 
 title: rejectManu
 
-position: -299,171
+position: -218,199
 ---
 
 Manu: No.
@@ -38,37 +69,39 @@ Manu: No.
 
 title: Kant
 
-position: 17,11
+position: -556,-77
 ---
 
 Manu: Es ist überall nichts in der Welt, ja überhaupt auch außer derselben zu denken möglich, was ohne Einschränkungen für gut könnte gehalten werden, als allein ein guter Wille.
-    -> Player: Sure thing.
-        Manu: Are you just agreeing with me, without having understood what I said, so I will go out with you?
-        Player: Maaaybe?
-            <<jump rejectManu>>
-    -> Player: I don't really agree, I myself am more fond of Utilitarianism.
-        Manu: So you think lying can be morally correct if it achieves a positive endgoal?
-        -> Player: Sure.
-            Player: But I would never lie about how smart and great and attractive you are. *wink*
-            Manu: … 
-            Player: Would you pretty please go out with me?
-            Manu: I guess the categorical imperative allows it.
-                <<jump ManuHappyEnd>>
-    -> Player: On second thought, not really…
-        Manu: Maybe you should read Kant. 
-        Player: I will if you would do me the honor of going out with me?
-        Manu: … you are kind of cute.
-            <<jump ManuHappyEnd>>
-    -> Player: Lying is the most fun a girl can have without taking her clothes off.
-        Manu: Like the Panic! at the disco song?
-        Player: Maaaybe? 
-        Manu: Okay, that settles it.
-            <<jump ManuHappyEnd>>
+	-> Player: Sure thing.
+		Manu: Are you just agreeing with me, without having understood what I said, so I will go out with you?
+		Player: Maaaybe?
+		Player: Would you date me anyways?
+			<<jump rejectManu>>
+	-> Player: I don't really agree, I myself am more fond of Utilitarianism.
+		Manu: So you think lying can be morally correct if it achieves a positive endgoal?
+		-> Player: Sure.
+			Player: But I would never lie about how smart and great and attractive you are. *wink*
+			Manu: … 
+			Player: Would you pretty please go out with me?
+			Manu: I guess the categorical imperative allows it.
+				<<jump ManuHappyEnd>>
+		-> Player: On second thought, not really…
+			Manu: Maybe you should read Kant. 
+			Player: I will if you would do me the honor of going out with me?
+			Manu: … you are kind of cute.
+				<<jump ManuHappyEnd>>
+		-> Player: Lying is the most fun a girl can have without taking her clothes off.
+			Manu: Like the Panic! at the disco song?
+			Player: Maaaybe? 
+			Manu: Okay, that settles it.
+				<<jump ManuHappyEnd>>
+
 ===
 
 title: ManuHappyEnd
 
-position: 25,-216
+position: -638,155
 ---
 
 Manu: I will go out with you.
@@ -76,6 +109,20 @@ Player: You won't regret it. *wink*
 Manu: … I already kinda do.
 Player: Aww sweetheart, I'm sorry, I'll try to act less silly.
 Manu: This is acceptable. <3
-<<date_success Manu>>
 
+<<set $Manu to true>>
+
+<<if $DinoDate == 0>>
+    <<set $DinoDate to 1>>
+<<elseif $DinoDate == 1>>
+    <<set $DinoDate to 2>>
+<<elseif $DinoDate == 2>>
+    <<set $DinoDate to 3>>
+<<elseif $DinoDate == 3>>
+    <<set $DinoDate to 4>>
+<<elseif $DinoDate == 4>>
+    <<set $DinoDate to 5>>
+<<elseif $DinoDate == 5>>
+    <<set $DinoDate to 6>>
+<<endif>>
 ===

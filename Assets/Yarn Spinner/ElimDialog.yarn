@@ -1,0 +1,264 @@
+title: ElimStart
+
+---
+
+Elim: Hey, hey, how do you like the game so far?
+-> Player: I love it!
+-> Player: It's fine.
+-> Player: Idk.
+
+Elim: You got any questions?
+    <<jump ElimQuestions>>
+
+===
+
+title: ElimQuestions
+
+--- 
+
+-> Player: Who are all these dinosaurs?
+    <<jump dinos>>
+-> Player: What kind maniac thinks a dinosaur-racing-dating-sim is a good idea?
+    <<jump maniacs>>
+-> Player: How does one make a game like this?
+    <<jump make>>
+-> Player: And who are you? <<if visited("dinos") == true and visited("maniacs") == true and visited("make") == true>>
+    <<jump ElimReveal>>
+-> Player: Thanks, I'll continue with the dating and racing.
+===
+
+title: dinos
+
+---
+
+Elim: Who do you want to know about?
+-> Player: The one with the long neck and the funny hat. <<if visited("ManuStart") == false>>
+    <<jump ManuReveal>>
+-> Player: Manu. <<if visited("ManuStart") == true>>
+    <<jump ManuReveal>>
+-> Player: The spiky one with the turtleneck sweater. <<if visited("NiamhStart") == false>>
+    <<jump NiamhReveal>>
+-> Player: Niamh. <<if visited("NiamhStart") == true>>
+    <<jump NiamhReveal>>
+-> Player: The one with the really colourful hair. <<if visited("RamonaStart") == false>>
+    <<jump RamonaReveal>>
+-> Player: Ramona. <<if visited("RamonaStart") == true>>
+    <<jump RamonaReveal>>
+-> Player: The one with the basecap and tanktop. <<if visited("MarkStart") == false>>
+    <<jump MarkReveal>>
+-> Player: Mark. <<if visited("MarkStart") == true>>
+    <<jump MarkReveal>>
+-> Player: The tiny, cool one. <<if visited("PedroStart") == false>>
+    <<jump PedroReveal>>
+-> Player: Pedro. <<if visited("PedroStart") == true>>
+    <<jump PedroReveal>>
+-> Player: I think I know enough.
+    <<jump ElimQuestions>>
+
+===
+
+title: ManuReveal
+
+---
+
+<<if $Manu == false>>
+    Elim: Manu, they are really interested in Philosophy, mainly Kant.
+    Elim: But they appreciate a good intellectual conversation regardless of philosophical stance.
+    Elim: Except if you want to talk about the Frankfurter Schule.
+    Elim: They have some kind of beef with those people.
+<<if $Manu == true>>
+    Manu: You could have just asked me yourself, you know?
+    Manu: Well as you already know my favourite philosopher is Kant.
+    Manu: I absolutely detest anyone who subscribes to the believes of the Frankfurter Schule.
+    Manu:...
+    Manu: My favourite food is nuggets.
+    Player: Thank you for telling me, sweetheart.
+    Manu: ... *blushes*
+<<endif>>
+
+Elim: Questions about anyone else?
+
+<<jump dinos>>
+===
+
+title: NiamhReveal
+
+---
+
+<<if $Niamh == false>>
+    Elim: Niamh, she works for some kind of start-up.
+    Elim: That's probably why she's always so stressed.
+    Elim: Oh and she has a special interest for coins.
+    Elim: They always catch her attention.
+<<if $Niamh == true>>
+    Niamh: I get it, I've told you more about DinoCoin than about myself.
+    Niamh: Next time just ask me directly.
+    Niamh: Via mail.
+    Niamh: Or leave a message on LinkedIn.
+    Niamh: I will get back to you in 2-3 business days.
+    Niamh: But about me...
+    Niamh: I work for a start-up, TriTech, that's short for Triceratops Technologies.
+    Niamh: My current bloodpressure is 150/90.
+    Niamh: And I'm still working on that DinoCoin pitch for tomorrow.
+    Niamh: So please excuse me, we resume this talk later.
+    Player: Okay, you can tell me about the new pitch whenever you're ready.
+    Niamh: Don't worry, I will. *wink*
+<<endif>>
+
+Elim: Questions about anyone else?
+
+<<jump dinos>>
+===
+
+title: RamonaReveal
+
+---
+
+<<if $Ramona == false>>
+    Elim: Ramona, there's not much to say about her tbh.
+<<if $Ramona == true>>
+    Ramona: My time to shine!
+    Ramona: My natural hair colour is dark brown.
+    Ramona: It's a pain to bleach but being able to dye it vibrant colours is worth it.
+    Ramona: My favourite song is "Enemy" by Imagine Dragons.
+    Ramona: My favourite Halloween costume is a skeleton.
+    Ramona: I really identify with Jess from "Kick it like Beckham".
+    Ramona: I don't know what my ringtone is, my phone has been on silent since 2007.
+    Ramona: And I want to die in a way that makes people chuckle when they think about it.
+    Ramona: I could tell you so much more but I still want to keep a bit of the mystery. *wink*
+    Player: I'm very excited to learn even more about you. *wink*
+<<endif>>
+
+Elim: Questions about anyone else?
+
+<<jump dinos>>
+===
+
+title: MarkReveal
+
+---
+
+<<if $Mark == false>>
+    Elim: Mark, why are you asking me about him? You two have been friends for ages.
+<<if $Mark == true>>
+    Mark: I'm right here, darling.
+    Mark: Well, I'll try to tell you something about myself that you don't know yet.
+    Mark: I'm so happy to have you as my best friend and I love you so much.
+    Mark: I think people are very strange these days.
+    Mark: The bank where I work has a new client.
+    Player: Oh what kinda of client.
+    Mark: I can't tell you, it's confidential.
+    Player: Fair point.
+    <<if $gender == 1>>
+        Mark: I'd do anything for my princess. *wink*
+        Player: *blushes*
+    <<endif>>
+    Mark: And my best pickup line?
+    Mark: Anyways how is your sexlife?
+    Player: ...
+    Player: Would have worked on me.
+    Mark: Love you.
+    Player: Love you too.
+
+<<endif>>
+
+Elim: Questions about anyone else?
+
+<<jump dinos>>
+===
+
+title: PedroReveal
+
+---
+
+Elim: Pedro. 
+Elim: I like the funky little guy.
+Elim: Great actor.
+Elim: Sweet friend.
+Elim: He has a ... special kind of humour.
+Elim: But he's someone you can always count on.
+Elim: ...
+Elim: I think he has a crush on me.
+Elim: ... he do be cute tho...
+Elim: ...
+Elim: ...
+Elim: Well anyways...
+Elim: Questions about anyone else?
+
+<<jump dinos>>
+===
+
+title: maniacs
+
+---
+
+Elim: They're called Tarek, Fionn, Jakob and Felix.
+Player: ...and?
+Elim: That's all I'm gonna say about that.
+Player: ...really?
+Elim: I said what I said.
+    <<jump ElimQuestions>>
+
+===
+
+title: make
+
+---
+
+Elim: You would first have to have an idea.
+Elim: Then you need people with skills.
+Player: What kind of skills?
+Elim: Mostly computer skills.
+Elim: You'll have to use programms like Unity, Blender, and of course Yarnspinner.
+Player: Sounds like a lot of work.
+Elim: And fun! But you can make a game like this in as little a 48 hours.
+Player: That's hard to believe.
+Elim: But true! Trust me.
+Player: Against my better judgement, I do.
+Elim: More questions?
+    <<jump ElimQuestions>>
+===
+
+title: ElimReveal
+
+---
+
+Elim: Me?
+Elim: Oh, I'm just regular old me.
+Elim: Just your usual billionaire playboy philantropist.
+Player: ...
+Elim: That was a joke.
+Elim: I am a musician.
+Elim: A part-time DJ to be precise.
+Player: And what do you do with the rest of your time?
+Elim: Oh, this and that.
+Player: Can you be more specific?
+Elim: ... no.
+Player: ... are you not allowed to be more specific?
+Elim: ... maybe.
+Player: Are you an international superspy?
+Elim: ...
+Elim: ... if I told you, I would have to kill you.
+Player: I will refrain from pressing the matter further.
+Player: But would you be interested in dating?
+Elim: ...
+Elim: You know what, I could use the distraction. And a bit of fun.
+Player: That's good enough for me.
+
+<<set $Elim to true>>
+
+<<if $DinoDate == 0>>
+    <<set $DinoDate to 1>>
+<<elseif $DinoDate == 1>>
+    <<set $DinoDate to 2>>
+<<elseif $DinoDate == 2>>
+    <<set $DinoDate to 3>>
+<<elseif $DinoDate == 3>>
+    <<set $DinoDate to 4>>
+<<elseif $DinoDate == 4>>
+    <<set $DinoDate to 5>>
+<<elseif $DinoDate == 5>>
+    <<set $DinoDate to 6>>
+<<endif>>
+
+===

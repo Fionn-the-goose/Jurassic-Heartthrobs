@@ -1,0 +1,166 @@
+title: NiamhStart
+
+position: -396,37
+---
+
+Player: Hello there.
+
+Niamh: ...
+
+-> Player: Wanna date? <<if $DinoCoin > 2 >>
+    Niamh: ...
+    Niamh: No.
+-> Player: Wanna talk? <<if $DinoCoin > 6 >>
+    Niamh: ...
+    Niamh: *mutters* ...coins...
+-> Player: You seem stressed. <<if $DinoCoin > 9 >>
+    Niamh: ...
+    Niamh: I sure am.
+    Niamh: I have to present a big project tomorrow and I'm not sure if I got the pitch down.
+    Niamh: I have to practise my public speaking but I am trapped in this studip dating-racing-sim.
+    -> Player: You can present the pitch to me, I'll listen.
+        Niamh: ...
+        Niamh: Okay.
+            <<jump DinoCoin>>
+    -> Player: Uh, well good luck tomorrow, I guess? I will leave now.
+        Niamh: I could present the pitch to you... no, i _will_ present the pitch to you.
+        Niamh: It will be a great exercise.
+        Player: Uuuuh, okay.
+            <<jump DinoCoin>>
+-> Player: Ok bye.
+
+===
+
+title: DinoCoin
+
+position: -178,160
+---
+
+Niamh: Rawr! Greetings, fellow dinosaurs! I present to you DinoCoin,the newest and most innovative cryptocurrency on the market.
+
+Niamh: DinoCoin is a decentralized currency that allows for secure and fast transactions without the need for intermediaries. 
+
+Niamh: With a total supply of 10 billion coins, DinoCoin is designed to easy accessability and affordability to all users.
+
+Niamh: DinoCoin's blockchain technology ensures transparency and immutability, ensuring that all transactions are verified and recorded.
+
+Niamh: Our advanced encryption algorithms make DinoCoin one of the most secure cryptocurrencies in the market, protecting your investments and transactions from potential hackers.
+
+Niamh: With a strong and passionate community of dinosaur enthusiasts, DinoCoin is more than just a currency; it's a lifestyle.
+
+Niamh: We are commited to environmental sustainability and the preservation of our planet. As such, we will donate a percentage of our profits to organizations dedicated to environmental causes.
+
+Niamh: Our team of expert developers and advisors are dedicated to ensuring the success and growth of DinoCoin, constantly exploring new ways to improve and innovate.
+
+Niamh: With our easy-to-use mobile app, you can securely buy, sell, and trade DinoCoin with just a few taps on your phone.
+
+Niamh: DinoCoin is already accepted by several merchants and businesses, and we're constantly explanding our reach to more markets.
+
+Niamh: So join us today and become part of the DinoCoin revolution. Together, we can take on the financial world and leave a lasting impact on history, just like our dinosaur ancestors. Rawr!
+
+Niamh: ...
+
+Niamh: Any questions?
+
+    <<set $perc to 0>>
+
+    <<set $merch to 0>>
+
+    <<set $comm to 0>>
+
+    <<jump Questions>>
+
+===
+title: Questions
+
+position: 74,279
+---
+
+-> Player: Exactly what percentage of your profits will you donate to charity? <<if $perc == 0>>
+    Niamh: ...
+    Niamh: 0.0000001%
+        <<set $perc to 1>>
+        <<jump Questions>>
+-> Player: Which merchants and businesses already accept DinoCoin? <<if $merch  == 0>>
+    Niamh: ...
+    Niamh: Jurassic Pork - the BBQ restaurant, Dino-Sore - the physical therapy and chiropractic clinic, T-Rex textbooks - the university book store, Ankylo-Ink - the tattoo parlor, Diplodocus Deli - the sandwich shop.
+    Niamh: ... and amazon.com.
+        <<set $merch to 1>>
+        <<jump Questions>>
+-> Player: How many dinosaur enthusiasts are already a part of your community? <<if $comm == 0>>
+    Niamh: ...
+    Niamh: Two. And one of them is my mom.
+        <<set $comm to 1>>
+        <<jump Questions>>
+-> Player: I am out of questions. <<if $perc == 1 and $merch == 1 and $comm == 1>>
+    <<jump Answer>>
+
+===
+
+title: Answer
+
+position: 479,222
+---
+
+Niamh: I got a question for you.
+
+Player: Oh?
+
+Niamh: What is the name of the technology that ensure the transparency and immutability of DinoCoin?
+
+-> Player: Hashgraph?
+    <<jump tryagain>>
+-> Player: Blockchain?
+    <<jump NiamhHappyEnd>>
+-> Player: DinoSure?
+    <<jump tryagain>>
+-> Player: Holochain?
+    <<jump tryagain>>
+
+===
+
+title: tryagain
+
+position: 629,-25
+---
+
+Niamh: Try again.
+    <<jump Answer>>
+
+===
+
+title: NiamhHappyEnd
+
+position: 546,511
+---
+
+Niamh: ...
+
+Niamh: I guess we can date now.
+
+Player: Really?
+
+Niamh: ...
+
+Niamh: Will your invest in DinoCoin?
+
+Player: ...
+
+Niamh: Just kidding *wink*
+
+<<set $Niamh to true>>
+
+<<if $DinoDate == 0>>
+    <<set $DinoDate to 1>>
+<<elseif $DinoDate == 1>>
+    <<set $DinoDate to 2>>
+<<elseif $DinoDate == 2>>
+    <<set $DinoDate to 3>>
+<<elseif $DinoDate == 3>>
+    <<set $DinoDate to 4>>
+<<elseif $DinoDate == 4>>
+    <<set $DinoDate to 5>>
+<<elseif $DinoDate == 5>>
+    <<set $DinoDate to 6>>
+<<endif>>
+===

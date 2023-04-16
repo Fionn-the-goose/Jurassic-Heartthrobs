@@ -1,0 +1,164 @@
+title: MarkStart
+
+position: -138,-276
+---
+
+<<if visited("yourmom") == true>>
+
+    <<jump MarkHappyEnd>> 
+
+<<else>>
+
+    <<jump MarkStart2>>
+
+<<endif>>
+
+=== 
+title: MarkStart2
+
+position: -162,-60
+---
+
+Player: I did not hit you, it's not true! It's bullshit! I did not hit you! I did naaaaht!
+Player: Oh hi, Mark.
+
+Mark: Oh hi, homie! How are you?
+-> Player: Great, it's so good to see you again!
+    Mark: Yeah, it's great seeing you again too, you know I've missed our game nights.
+    <<jump whatru>>
+-> Player: Okay, I guess...
+    Mark: You know what would cheer you up? One of our cozy game nights!
+    <<jump whatru>>
+-> Player: Idk, I keep getting rejected. Dating sucks...
+    Mark: Oh, you know I would never reject you if you asked me to have another game night again haha...
+    <<jump whatru>>
+-> Player: Pretty good, I'm trying out this dinosaur-racing-dating-sim that's super fun!
+    Mark: Sounds cool, maybe we should play it at our next game night.
+    <<jump whatru>>
+===
+
+title: whatru
+
+position: 340,-20
+---
+
+Mark: ...
+
+Mark: You know, there's something I wanted to asked you for quite some time.
+
+Mark: And please don't be mad, I am just, like, really not sure and trying to understand you better.
+
+Player: Go on.
+
+Mark: Are you, like, a girl or a boy?
+-> Player: A girl.
+    <<set $gender to 1>>
+        <<jump next>>
+-> Player: A boy.
+    <<set $gender to 2>>
+        <<jump next>>
+-> Player: Neither.
+    <<set $gender to 3>>
+        <<jump next>>
+-> Player: Both.
+    <<set $gender to 4>>
+        <<jump next>>
+-> Player: It changes.
+    <<set $gender to 5>>
+        <<jump next>>
+
+===
+
+title: next
+
+position: -148,211
+---
+
+Mark: That's cool. I mean, obvoiusly it's not important to me because i really like you.
+
+Mark: I mean, if it's important to you, it's also important to me, because you're important to me.
+
+Mark: Argh.
+
+Mark: What I wanted to say is, that your gender doesn't change my feeling for you.
+
+Mark: You know?
+-> Player: I guess?
+-> Player: Yeah?
+-> Player: Uuuuh, maaaybe?
+
+Player: But I have liked you for some time now, so I'm just really happy to hear that you feel the same way.
+
+Mark: That's so great!
+<<if $gender == 1>>
+    Mark: And now I know that, I can refer to you as "she" when I introduce you to my mom!
+        <<jump yourmom>>
+<<elseif $gender == 2>>
+    Mark: And now I know that, I can refer to you as "he" when I introduce you to my mom!
+        <<jump yourmom>>
+<<elseif $gender == 3 or $gender == 4>>
+    Mark: And now I know that, I can refer to you as "they" or just by your name when I introduce you to my mom!
+        <<jump yourmom>>
+<<elseif $gender == 5>>
+    Mark: And now I know that, I can ask you about which pronouns your feeling like today when I introduce you to my mom!
+        <<jump yourmom>>
+<<endif>>
+
+===
+
+title: yourmom
+
+position: 422,206
+---
+
+Player: Your mom? Isn't that a bit weird?
+
+Player: We haven't even been on one date and you're thinking about introducing me to your mom?
+
+Player: Idk bro...
+
+Mark: Oh, if you think that's weird, that might be a dealbreaker.
+
+Mark: I'll have to think about this...
+
+===
+
+title: MarkHappyEnd
+
+position: 318,-267
+---
+
+Mark: You know, I thought about it. 
+
+Mark: I really love my mom, I do.
+
+Mark: Since I was a kid I've always wanted to make her proud. 
+
+Mark: But maybe the thought of disappointing her has been holding me back from living my life.
+
+Mark: ... I would really like to go out with you. 
+
+Player: I'd love that. 
+
+Player: ...
+
+Player: And I can see myself meeting your mom someday.
+
+Player: She seems great. Just like her son.
+
+<<set $Mark to true>>
+
+<<if $DinoDate == 0>>
+    <<set $DinoDate to 1>>
+<<elseif $DinoDate == 1>>
+    <<set $DinoDate to 2>>
+<<elseif $DinoDate == 2>>
+    <<set $DinoDate to 3>>
+<<elseif $DinoDate == 3>>
+    <<set $DinoDate to 4>>
+<<elseif $DinoDate == 4>>
+    <<set $DinoDate to 5>>
+<<elseif $DinoDate == 5>>
+    <<set $DinoDate to 6>>
+<<endif>>
+===
