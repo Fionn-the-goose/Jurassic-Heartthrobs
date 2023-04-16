@@ -45,5 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Music:
-  - {fileID: 8300000, guid: 82e0fa5e5d5e9695eac86edd111cfb9a, type: 3}
-  m_MusicSource: {fileID: 0}
+  - {fileID: 8300000, guid: c89d9f91ecea10058b6c5c7caa6ba278, type: 3}
+  - {fileID: 8300000, guid: a7a28c0537982ed01b87df4e26d10b63, type: 3}
+  - {fileID: 8300000, guid: 43a7a3721b6ca8e31a90db1397950578, type: 3}
+  - {fileID: 8300000, guid: d787f437be7889b18b175b2c6036b27c, type: 3}
+  - {fileID: 8300000, guid: e076fafcfc607d01c9d868979b2e925e, type: 3}
+  - {fileID: 8300000, guid: 50e7a01559be349fc8176e4b301707e1, type: 3}
+  - {fileID: 8300000, guid: e9ed88c19d1817afa81e89d735f7df0e, type: 3}
+  CurrentDino: 

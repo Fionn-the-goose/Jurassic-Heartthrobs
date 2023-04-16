@@ -33,6 +33,7 @@ public class DialogeTrigger : MonoBehaviour {
         m_Car = GetComponent<PlayerCar>();
         GameManager.Instance.SetFrozen(true);
         dialogueRunner.StartDialogue(date_name + "Start");
+        GameManager.ChangeMusic("Music" + date_name);
     }
 
     private void Update() {

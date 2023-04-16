@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         m_MusicSource = GameObject.Find("CM vcam1").GetComponent<AudioSource>();
+        ChangeMusic("RacingMusic");
     }
 
     public void SetFrozen(bool freeze) {
@@ -62,11 +63,13 @@ public class GameManager : MonoBehaviour {
             }
         }
         SetupUI(dinoName, hide: true, smash: true);
+        ChangeMusic("RacingMusic");
     }
 
     [YarnCommand("date_fail")]
     public static void DateFail(string dinoName) {
         SetupUI(dinoName, hide: true, smash: false);
+        ChangeMusic("RacingMusic");
     }
 
     [YarnCommand("change_music")]
