@@ -161,7 +161,7 @@ public class PlayerCar : MonoBehaviour {
         }
     }
     public IEnumerator BoostCoroutine(float duration) {
-        m_RigidBody.AddForce(transform.forward* 100f, ForceMode.Impulse );
+        m_RigidBody.AddForce(transform.forward* 50f, ForceMode.Impulse );
         yield return new WaitForSeconds(duration);
     }
 
