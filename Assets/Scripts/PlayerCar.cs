@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using Yarn.Unity;
 
 public class PlayerCar : MonoBehaviour {
 
@@ -16,11 +17,15 @@ public class PlayerCar : MonoBehaviour {
 
     [SerializeField]
     private float m_Speed;
+    [SerializeField]
+    private InMemoryVariableStorage m_DialougeMemory;
 
     [SerializeField]
     private Transform m_Kart;
 
     private float m_MaxSpeed = 10f;
+
+    public int DinoCoins = 0;
 
     [SerializeField]
     private float m_DashForce;
@@ -62,6 +67,10 @@ public class PlayerCar : MonoBehaviour {
             var theta = Vector3.SignedAngle(transform.forward, m_RigidBody.velocity, Vector3.up);
             return theta > -90f && theta < 90f;
         }
+    }
+
+    public void SetDialougeCoins(){
+        m_DialougeMemory.SetValue("$DinoCoin", DinoCoins);
     }
 
     void Start() {

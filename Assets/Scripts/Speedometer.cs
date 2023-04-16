@@ -13,6 +13,6 @@ public class Speedometer : MonoBehaviour {
 
     void Update() {
         var speed = Math.Round(15f * m_Player.Velocity, 1);
-        m_Text.text = speed + " km/h (" + m_Player.Velocity + ")";
+        m_Text.text = speed + "km/h\n" + m_Player.DinoCoins +" coins";
     }
 }
