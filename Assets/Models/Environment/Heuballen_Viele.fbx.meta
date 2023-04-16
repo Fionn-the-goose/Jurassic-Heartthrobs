@@ -3,7 +3,17 @@ guid: 1a96dfc9f4b442645a1ebf776a38d84f
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Heuballen
+    second: {fileID: 2100000, guid: f1e97236eafd78cb9a92180f8c8d6214, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Heuballen 1
+    second: {fileID: 2100000, guid: b834818a978df4a64a7933ca6aef3c82, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

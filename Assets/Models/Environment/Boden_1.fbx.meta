@@ -3,7 +3,17 @@ guid: 9e8e4cecf2c793b4491577422d40298d
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fels Seite
+    second: {fileID: 2100000, guid: 9497cf65ae78817ebb6326f66de763e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fels Top
+    second: {fileID: 2100000, guid: 5f1924b297ed2cbf7bf02c8c0db5463f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
