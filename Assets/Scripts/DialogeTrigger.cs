@@ -47,7 +47,7 @@ public class DialogeTrigger : MonoBehaviour {
         }
         m_DialogueRunning = dialogueRunner.IsDialogueRunning;
         if (Input.GetKeyDown(KeyCode.N)) {
-            TriggerDialogue("Manu");
+            TriggerDialogue("Elim");
         }
     }
 }

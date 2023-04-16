@@ -54,4 +54,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e9ed88c19d1817afa81e89d735f7df0e, type: 3}
   - {fileID: 8300000, guid: eb08367228ee26e808f4b12f9a4e9a73, type: 3}
   - {fileID: 8300000, guid: 649ed846786f30d66ab1c880ca9e2ae7, type: 3}
+  - {fileID: 8300000, guid: 6501fc9e4ef1b70af9f4ec8c1f5d2ac7, type: 3}
+  - {fileID: 8300000, guid: cd66887346fc68f7da1f65fdcab350d9, type: 3}
+  - {fileID: 8300000, guid: 29fe3eed0a9eb0718b18d7c4be896d6f, type: 3}
+  - {fileID: 8300000, guid: dc14921d2dca744feb7b09eddd9ef554, type: 3}
+  - {fileID: 8300000, guid: e38d3bc168c8f295c981d32c0a119d35, type: 3}
+  - {fileID: 8300000, guid: 77cd0c700ae8ca129ae5c797f9c919d1, type: 3}
   CurrentDino: 

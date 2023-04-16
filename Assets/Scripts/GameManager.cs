@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour {
     public static GameManager Instance = null;
@@ -16,6 +17,10 @@ public class GameManager : MonoBehaviour {
 
     private AudioSource m_MusicSource;
     private AudioSource m_FXSource;
+    private AudioSource m_VoiceSource;
+
+    private TMP_Text m_CharacterName;
+    private string m_Speaker = null;
 
     private List<string> m_Dates = new List<string>();
 
@@ -37,6 +42,8 @@ public class GameManager : MonoBehaviour {
     void Start() {
         m_MusicSource = GameObject.Find("CM vcam1").GetComponent<AudioSource>();
         m_FXSource = GameObject.Find("FX Source").GetComponent<AudioSource>();
+        m_VoiceSource = GameObject.Find("Voice Source").GetComponent<AudioSource>();
+        m_CharacterName = GameObject.Find("Character Name").GetComponent<TMP_Text>();
         ChangeMusic("RacingMusic");
         PlaySFX("SoundSmash");
     }
@@ -46,9 +53,14 @@ public class GameManager : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.M)) {
-            DateSuccess("Manu");
+        var speaker_new = m_CharacterName.text;
+
+        if (m_Speaker != speaker_new) {
+            Debug.Log($"New speaker {speaker_new}.");
+            ChangeMusic($"Voice{speaker_new}", is_music: false);
         }
+
+        m_Speaker = speaker_new;
     }
 
     [YarnCommand("date_success")]
@@ -67,6 +79,7 @@ public class GameManager : MonoBehaviour {
         }
         SetupUI(dinoName, hide: true, smash: true);
         ChangeMusic("RacingMusic");
+        Instance.m_VoiceSource.Stop();
     }
 
     [YarnCommand("date_fail")]
@@ -74,10 +87,11 @@ public class GameManager : MonoBehaviour {
         SetupUI(dinoName, hide: true, smash: false);
         ChangeMusic("RacingMusic");
         PlaySFX("SoundFail");
+        Instance.m_VoiceSource.Stop();
     }
 
     [YarnCommand("change_music")]
-    public static void ChangeMusic(string name) {
+    public static void ChangeMusic(string name, bool is_music = true) {
         AudioClip clip = null;
         foreach (var c in Instance.m_Music) {
             if (c.name == name) {
@@ -86,9 +100,14 @@ public class GameManager : MonoBehaviour {
             }
         }
         if (clip != null) {
-            Instance.m_MusicSource.Stop();
-            Instance.m_MusicSource.PlayOneShot(clip);
-            Instance.m_MusicSource.loop = true;
+            var source = is_music ? Instance.m_MusicSource : Instance.m_VoiceSource;
+            source.Stop();
+            source.clip = clip;
+            if (is_music) {
+                source.volume = name == "RacingMusic" ? 1f : 0.5f;
+            }
+            source.Play();
+            source.loop = true;
         }
     }
 
