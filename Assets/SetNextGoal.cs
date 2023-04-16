@@ -17,7 +17,8 @@ public class SetNextGoal : MonoBehaviour
         Debug.Log("Dino Entert");
         Debug.Log(other);
         if(dino != null){
-            dino.DinoAgend.destination = new Vector3(NextPosition.position.x + Random.Range(0f, 3f), NextPosition.position.y ,NextPosition.position.z + Random.Range(0f, 3f));
+            var dest = new Vector3(NextPosition.position.x + Random.Range(0f, 3f), NextPosition.position.y ,NextPosition.position.z + Random.Range(0f, 3f));
+            dino.SetDestination(dest);
         }
     }
 }
