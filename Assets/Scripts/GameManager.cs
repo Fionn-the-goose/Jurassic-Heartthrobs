@@ -46,4 +46,9 @@ public class GameManager : MonoBehaviour {
             }
         }
     }
+
+    [YarnCommand("change_music")]
+    public static void ChangeMusic(string name) {
+        // TODO
+    }
 }
