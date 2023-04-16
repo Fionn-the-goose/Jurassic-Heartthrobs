@@ -22,12 +22,17 @@ public class DialogeTrigger : MonoBehaviour {
         if (date != null && !dialogueRunner.IsDialogueRunning
                 && m_LastInteracton + COOLDOWN < Time.fixedTime
                 && m_Car.IsDashing()) {
-            m_LastInteracton = Time.fixedTime;
-            m_DialogueRunning = true;
-            m_Car = GetComponent<PlayerCar>();
-            GameManager.Instance.SetFrozen(true);
-            dialogueRunner.StartDialogue(date.name + "Start");
+            TriggerDialogue(date.name);
         }
+    }
+
+    private void TriggerDialogue(string date_name) {
+        GameManager.SetupUI(date_name);
+        m_LastInteracton = Time.fixedTime;
+        m_DialogueRunning = true;
+        m_Car = GetComponent<PlayerCar>();
+        GameManager.Instance.SetFrozen(true);
+        dialogueRunner.StartDialogue(date_name + "Start");
     }
 
     private void Update() {
@@ -37,5 +42,8 @@ public class DialogeTrigger : MonoBehaviour {
             GameManager.Instance.SetFrozen(false);
         }
         m_DialogueRunning = dialogueRunner.IsDialogueRunning;
+        if (Input.GetKeyDown(KeyCode.N)) {
+            TriggerDialogue("Manu");
+        }
     }
 }

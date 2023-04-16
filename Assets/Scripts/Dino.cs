@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+
 public class Dino : MonoBehaviour {
     public string Name;
     public Transform InitialGoal;
@@ -12,7 +13,9 @@ public class Dino : MonoBehaviour {
         GameManager.Instance.OnFreezeChange += OnFreezeChange;
     }
     public void OnDestroy() {
-        GameManager.Instance.OnFreezeChange -= OnFreezeChange;
+        if (GameManager.Instance) {
+            GameManager.Instance.OnFreezeChange -= OnFreezeChange;
+        }
     }
     public void SetDestination(Vector3 dest) {
         if (DinoAgend.enabled) {
